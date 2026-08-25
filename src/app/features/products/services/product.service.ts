@@ -256,7 +256,7 @@ export class ProductService {
 
     let pending = subs.length;
     subs.forEach((sub, index) => {
-      this.fetchAllProductsInCategory(category.id, sub.slug).subscribe({
+      this.fetchAllProductsInCategory(sub.slug).subscribe({
         next: (products) => {
           sections[index] = { id: sub.slug, name: sub.name, products };
           if (--pending === 0) {
@@ -289,3 +289,4 @@ export class ProductService {
     );
   }
 }
+
