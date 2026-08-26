@@ -6,7 +6,7 @@ import { CartItem } from '@features/cart/types/cart.interface';
 import { ProductTranslatePipe } from '../../../products/pipes/product-translate.pipe';
 import { OfferBadgeComponent } from '../../../products/components/offer-badge/offer-badge.component';
 import { IconComponent } from '../../../../shared/components/icons/icons.component';
-import { getAssetUrl, cleanPrice } from '../../../../core/utils';
+import { cleanPrice } from '../../../../core/utils';
 import { QuantityControlsComponent } from '../quantity-controls/quantity-controls.component';
 
 /**
@@ -42,10 +42,6 @@ export class CartItemComponent {
 
   public get discountPercentage(): number {
     return this.item.discountPercentage ?? 0;
-  }
-
-  public getImageUrl(path: string): string {
-    return getAssetUrl(path);
   }
 
   public getFormattedPrice(price: number): string {

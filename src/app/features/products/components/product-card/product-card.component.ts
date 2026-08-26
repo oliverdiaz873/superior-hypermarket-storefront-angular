@@ -5,7 +5,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ProductUI } from '../../models/product-ui.interface';
 import { ProductTranslatePipe } from '../../pipes/product-translate.pipe';
 import { AddToCartButtonComponent } from '../../../cart/components/add-to-cart-button/add-to-cart-button.component';
-import { cleanPrice, getAssetUrl, unitLabel } from '../../../../core/utils';
+import { cleanPrice, unitLabel } from '../../../../core/utils';
 import { OfferBadgeComponent } from '../offer-badge/offer-badge.component';
 
 @Component({
@@ -29,10 +29,6 @@ export class ProductCardComponent {
 
   public cleanPrice(text: string): string {
     return cleanPrice(text);
-  }
-
-  public getAssetUrl(path: string): string {
-    return getAssetUrl(path);
   }
 
   public get isOffer(): boolean {

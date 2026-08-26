@@ -42,6 +42,7 @@ describe('OrderDetailPageComponent', () => {
   let translate: Record<string, unknown>;
 
   function configure(order: Order): void {
+    TestBed.resetTestingModule();
     TestBed.configureTestingModule({
       imports: [OrderDetailPageComponent],
       providers: [
@@ -64,7 +65,27 @@ describe('OrderDetailPageComponent', () => {
       cancel: vi.fn(() => of(baseOrder)),
     };
     toast = { error: vi.fn(), success: vi.fn() };
-    translate = { instant: vi.fn((key: string) => key), translate: (key: string) => () => key };
+    translate = {
+      instant: vi.fn((key: string) => key),
+      get: vi.fn(() => of('')),
+      stream: vi.fn(() => of('')),
+      translate: vi.fn((key: string) => () => key),
+      currentLang: 'es',
+      onLangChange: { subscribe: vi.fn() },
+      onTranslationChange: { subscribe: vi.fn() },
+      onDefaultLangChange: { subscribe: vi.fn() },
+      defaultLang: 'es',
+      addLangs: vi.fn(),
+      getLangs: vi.fn(() => ['es', 'en']),
+      setDefaultLang: vi.fn(),
+      use: vi.fn(),
+      reloadLang: vi.fn(),
+      resetLang: vi.fn(),
+      getBrowserLang: vi.fn(() => 'es'),
+      getBrowserCultureLang: vi.fn(() => 'es-ES'),
+      setTranslation: vi.fn(),
+      getTranslation: vi.fn(() => Promise.resolve({})),
+    };
   });
 
   it('loads and renders the order detail', () => {

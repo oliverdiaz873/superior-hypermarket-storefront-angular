@@ -5,7 +5,6 @@ import { ProductUI } from '../../models/product-ui.interface';
 import { ProductPageData } from '../../../../data/product-page.data';
 import { ProductTranslatePipe } from '../../pipes/product-translate.pipe';
 import { AddToCartButtonComponent } from '../../../cart/components/add-to-cart-button/add-to-cart-button.component';
-import { getAssetUrl } from '../../../../core/utils';
 import { ProductTranslationService } from '../../services/product-translation.service';
 
 /**
@@ -26,7 +25,6 @@ export class ProductDetailSectionComponent {
   @Input({ required: true }) product!: ProductUI;
   @Input() pageData?: ProductPageData;
 
-  public readonly getAssetUrl = getAssetUrl;
 
   readonly productTranslation = inject(ProductTranslationService);
   private platformId = inject(PLATFORM_ID);

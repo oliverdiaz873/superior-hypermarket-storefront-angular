@@ -2,7 +2,7 @@
 import { ActivatedRoute } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { TranslateService } from '@ngx-translate/core';
-import { getAssetUrl, getCategoryName, getSubcategoryName } from '@core/utils';
+import { getCategoryName, getSubcategoryName } from '@core/utils';
 import { subcategorySlugFromHref } from '@data/category-section-map.data';
 import { SeoService } from '@core/services/seo.service';
 import { BRAND_NAME } from '@core/constants';
@@ -116,7 +116,7 @@ export class ProductPageComponent {
 
     const productName = this.productTranslation.getName(product);
     const description = this.productTranslation.getDescription(product, this.pageData());
-    const imageUrl = this.seo.absoluteUrl(getAssetUrl(product.imagen));
+    const imageUrl = this.seo.absoluteUrl(product.imagen);
 
     this.seo.applySeo({
       title: productName,
