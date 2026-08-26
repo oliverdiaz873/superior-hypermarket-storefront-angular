@@ -15,7 +15,7 @@
         @for (product of searchService.searchResults(); track product.id) {
           <li (click)="handleResultClick(product.id)" class="tablet-search__result">
             <img
-              [src]="getAssetUrl(product.imagen)"
+              [src]="product.imagen"
               [alt]="getProductName(product)"
               width="40"
               height="40"
