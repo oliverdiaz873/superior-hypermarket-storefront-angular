@@ -5,7 +5,14 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ProductUI } from '../../models/product-ui.interface';
 import { ProductTranslatePipe } from '../../pipes/product-translate.pipe';
 import { AddToCartButtonComponent } from '../../../cart/components/add-to-cart-button/add-to-cart-button.component';
-import { cleanPrice, getAssetUrl, unitLabel } from '../../../../core/utils';
+import {
+  cleanPrice,
+  getAssetUrl,
+  formatUnitLabel,
+  formatProductPrice,
+  formatPricePerUnit,
+  type TranslateFn,
+} from '../../../../core/utils';
 import { OfferBadgeComponent } from '../offer-badge/offer-badge.component';
 
 @Component({
@@ -16,10 +23,6 @@ import { OfferBadgeComponent } from '../offer-badge/offer-badge.component';
   styleUrl: './product-card.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-/**
- * ProductCardComponent - Reusable product card.
- * Migrated from Next.js ProductCard with full visual parity.
- */
 export class ProductCardComponent {
   private translate = inject(TranslateService);
 
@@ -39,14 +42,25 @@ export class ProductCardComponent {
     return !!this.oldPrice;
   }
 
+  private get translateFn(): TranslateFn {
+    return (key: string) => this.translate.instant(key);
+  }
+
   getUnitLabel(product: ProductUI): string {
-    const label = unitLabel(product);
-    const key = `common.units.${label}`;
-    const translated = this.translate.instant(key);
-    const unit = translated !== key ? translated : label;
-    if (product.quantity && product.quantity > 1) {
-      return `${product.quantity} ${unit}`;
-    }
-    return unit;
+    return formatUnitLabel(product, this.translateFn);
+  }
+
+  getUnitPriceLabel(product: ProductUI): string {
+    return formatPricePerUnit(product, this.translateFn);
+  }
+
+  public getFormattedPrice(price: number): string {
+    return `$${price.toLocaleString('en-US')}`;
+  }
+
+  getPriceText(product: ProductUI): string {
+    return formatProductPrice(product, this.translateFn, {
+      pricePrefix: this.translate.instant('common.product.price_prefix'),
+    });
   }
 }

@@ -116,14 +116,35 @@
       }
     },
     "units": {
-      "unidad": "unidad",
+      "unidad": {
+        "singular": "unidad",
+        "plural": "unidades"
+      },
+      "litro": {
+        "singular": "litro",
+        "plural": "litros"
+      },
+      "paquete": {
+        "singular": "paquete",
+        "plural": "paquetes"
+      },
+      "caja": {
+        "singular": "caja",
+        "plural": "cajas"
+      },
+      "botella": {
+        "singular": "botella",
+        "plural": "botellas"
+      },
+      "lata": {
+        "singular": "lata",
+        "plural": "latas"
+      },
       "kg": "kg",
+      "g": "g",
       "lb": "lb",
-      "litro": "litros",
-      "paquete": "paquete",
-      "caja": "caja",
-      "botella": "botella",
-      "lata": "lata"
+      "oz": "oz",
+      "ml": "ml"
     },
     "seo": {
       "keywords": "{name}, {category}, hipermercado, oferta, república dominicana"

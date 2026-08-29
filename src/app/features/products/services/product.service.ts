@@ -64,6 +64,8 @@ export class ProductService {
     if (!offer) return product;
     return {
       ...product,
+      precio: offer.precio,
+      precioTexto: offer.precioTexto,
       oldPrice: offer.oldPrice,
       discountPercentage: offer.discountPercentage,
     };

@@ -2,8 +2,8 @@ import { Injectable, signal, computed, effect, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Observable, firstValueFrom, fromEvent, throwError } from 'rxjs';
 import { Product } from '@core/types/product.interface';
-import { unitLabel } from '@core/utils/price-utils';
 import { CartItem, CartMode } from '../types/cart.interface';
+import type { StructuredUnitInput } from '@core/utils/price-utils';
 import { ApiCart } from '../types/cart-api.interface';
 import { discountFromPrices, toMergePayload, uiCartFromServer } from '../utils/cart-mapper';
 import { createSerialQueue } from '../utils/mutation-queue';
@@ -310,7 +310,15 @@ export class CartService {
 
   /** Construye el item visual para el update optimista (usa los datos locales). */
   private buildCartItem(product: Product, quantity: number, oldPrice?: string): CartItem {
-    const finalUnidad = this.extractUnidad(product);
+    // --- Datos estructurados (NUEVO patrón).
+    // unitLabel = NOMBRE DE LA UNIDAD (sin plural, sin cantidad).
+    // unitQuantity = CANTIDAD de esa unidad por presentación (1, 2, 0.5, 500, …).
+    // La presentación ("2 litros", "0.5 kg") la calcula la UI a través
+    // de formatUnitLabel con el TranslateService actual (i18n).
+    const finalUnidad = this.extractUnidadName(product);
+    const structured = product as unknown as StructuredUnitInput;
+    const productQuantity = structured.quantity ?? structured.unitQuantity;
+
     const backendDiscount = (product as ProductUI).discountPercentage ?? 0;
     const discountPercentage = backendDiscount > 0
       ? backendDiscount
@@ -323,20 +331,27 @@ export class CartService {
       name: product.name,
       imagen: product.imagen,
       unitPrice: product.precio,
-      unitLabel: unitLabel(product),
+      unitLabel: finalUnidad,
       quantity,
       precioTexto: product.precioTexto,
       oldPrice,
       unidad: finalUnidad,
       isOffer: discountPercentage > 0,
       discountPercentage,
-      unitQuantity: product.quantity
+      unitQuantity: productQuantity ?? 1,
     };
   }
 
   /**
    * Restores cart state from localStorage and normalizes fields
    * to ensure backward compatibility with persisted data.
+   *
+   * LÉGADO: en versiones anteriores se persistía unitLabel fabricado con
+   * formatUnitLabel("2 litros"). Ahora conservamos unidad y unitQuantity
+   * POR SEPARADO (estructurado). Si detectamos un item legacy, mantenemos
+   * su unitLabel crudo tal cual estaba guardado; el componente cart-item
+   * usa los campos estructurados (unidad + unitQuantity) como fuente
+   * primaria y unitLabel pasa a ser un display-name sin lógica adjunta.
    */
   private rehydrate(): void {
     try {
@@ -344,13 +359,13 @@ export class CartService {
       if (stored && Array.isArray(stored)) {
         const normalized = stored.map((item) => {
           const discountPct = discountFromPrices(item.unitPrice, item.oldPrice);
+          const qtyForLabel = item.unitQuantity ?? item.quantity;
           return {
             ...item,
-            unitLabel: item.unitLabel ?? unitLabel({ unidad: item.unidad, precioTexto: item.precioTexto } as Product),
             discountPercentage: discountPct,
             isOffer: discountPct > 0,
             unidad: item.unidad ?? undefined,
-            unitQuantity: item.unitQuantity ?? undefined
+            unitQuantity: qtyForLabel,
           };
         });
         this._localCart = [...normalized];
@@ -362,16 +377,13 @@ export class CartService {
   }
 
   /**
-   * Extracts the unit label from a product.
-   * Priority: explicit unidad field > text after "/" in precioTexto > undefined.
+   * Extrae el NOMBRE de la unidad desde un product (campo explícito unidad).
+   * SOLO nombre; cantidad va por separado en quantity/unitQuantity.
+   * No parsea precios ni strings compuestos.
    */
-  private extractUnidad(product: Product): string | undefined {
-    if (product.unidad) return product.unidad;
-    if (product.precioTexto) {
-      const parts = product.precioTexto.split('/');
-      if (parts.length > 1) {
-        return parts[parts.length - 1].trim().replace(/\.$/, '');
-      }
+  private extractUnidadName(product: Product): string | undefined {
+    if (product.unidad && product.unidad.trim().length > 0) {
+      return product.unidad.trim();
     }
     return undefined;
   }

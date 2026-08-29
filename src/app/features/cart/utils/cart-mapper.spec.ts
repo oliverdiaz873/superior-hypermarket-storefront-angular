@@ -46,9 +46,19 @@ describe('toUiCartItem', () => {
     expect(ui.imagen).toBe('https://cdn.example.com/a.webp?v=1');
   });
 
-  it('defaults unitLabel to "unidad" when unit is blank', () => {
+  it('si unit está vacío / blanco → unitLabel undefined (estructurado; sin unidad = no definida)', () => {
     const ui = toUiCartItem(apiItem({ unit: '   ' }));
-    expect(ui.unitLabel).toBe('unidad');
+    expect(ui.unitLabel).toBeUndefined();
+  });
+
+  it('unit = undefined → unitLabel undefined', () => {
+    const ui = toUiCartItem(apiItem({ unit: undefined }));
+    expect(ui.unitLabel).toBeUndefined();
+  });
+
+  it('unit = null → unitLabel undefined (nullish safety)', () => {
+    const ui = toUiCartItem(apiItem({ unit: null as unknown as undefined }));
+    expect(ui.unitLabel).toBeUndefined();
   });
 
   it('leaves oldPrice undefined when there is no originalPrice', () => {
@@ -66,7 +76,8 @@ describe('uiCartFromServer', () => {
     };
 
     expect(uiCartFromServer(cart).map((i) => i.productId)).toEqual(['a', 'b']);
-    expect(uiCartFromServer(cart)[1].unitLabel).toBe('unidad');
+    // unit undefined → NO unidad fantasma. Se guarda undefined.
+    expect(uiCartFromServer(cart)[1].unitLabel).toBeUndefined();
   });
 
   it('returns an empty list for an empty server cart', () => {

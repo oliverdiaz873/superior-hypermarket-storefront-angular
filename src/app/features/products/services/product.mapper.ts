@@ -11,16 +11,15 @@ import { ProductUI } from '@features/products/models/product-ui.interface';
  * - `category.slug` → `categoria` (la identidad navegable es el slug).
  * - `url` y `precioTexto` se generan en el frontend (no vienen del backend).
  * - `image` se resuelve con el resolver de imágenes (nunca se toca el backend).
+ * - `precioTexto` representa SOLO el precio base; la presentación de unidad/cantidad
+ *   se delega a `formatProductPrice()` / `formatUnitLabel()` en `price-utils.ts`.
  */
 export function mapApiProductToProductUI(api: ApiProduct): Product {
   const imagen = resolveProductImageUrl(api.image) ?? '';
   const unit = api.unit ?? '';
   const quantity = api.unitQuantity;
 
-  const hasUnitBlock = Boolean(unit || (quantity != null && quantity > 1));
-  const precioTexto = hasUnitBlock
-    ? `Precio: $${api.price.toLocaleString('en-US')} / ${quantity ?? 1} ${unit}`.trim()
-    : `Precio: $${api.price.toLocaleString('en-US')}`;
+  const precioTexto = `Precio: $${api.price.toLocaleString('en-US')}`;
 
   return {
     id: api.id,

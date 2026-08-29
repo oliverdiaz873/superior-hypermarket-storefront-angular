@@ -1,19 +1,19 @@
 import { Component, Input, inject, ChangeDetectionStrategy, ViewChild, ElementRef, HostListener, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ProductUI } from '../../models/product-ui.interface';
 import { ProductPageData } from '../../../../data/product-page.data';
 import { ProductTranslatePipe } from '../../pipes/product-translate.pipe';
 import { AddToCartButtonComponent } from '../../../cart/components/add-to-cart-button/add-to-cart-button.component';
-import { getAssetUrl } from '../../../../core/utils';
+import {
+  cleanPrice,
+  getAssetUrl,
+  formatUnitLabel,
+  formatProductPrice,
+  type TranslateFn,
+} from '../../../../core/utils';
 import { ProductTranslationService } from '../../services/product-translation.service';
 
-/**
- * ProductDetailSection - Main product detail section.
- * Displays product image with lightbox modal, name, price,
- * rich description, technical detail bullet points, and
- * an add-to-cart button.
- */
 @Component({
   selector: 'app-product-detail-section',
   standalone: true,
@@ -27,6 +27,11 @@ export class ProductDetailSectionComponent {
   @Input() pageData?: ProductPageData;
 
   public readonly getAssetUrl = getAssetUrl;
+  private translate = inject(TranslateService);
+
+  public cleanPrice(text: string): string {
+    return cleanPrice(text);
+  }
 
   readonly productTranslation = inject(ProductTranslationService);
   private platformId = inject(PLATFORM_ID);
@@ -37,6 +42,24 @@ export class ProductDetailSectionComponent {
 
   get specs(): string[] {
     return this.productTranslation.getSpecs(this.product, this.pageData);
+  }
+
+  private get translateFn(): TranslateFn {
+    return (key: string) => this.translate.instant(key);
+  }
+
+  getUnitLabel(product: ProductUI): string {
+    return formatUnitLabel(product, this.translateFn);
+  }
+
+  public getFormattedPrice(price: number): string {
+    return `$${price.toLocaleString('en-US')}`;
+  }
+
+  getPriceText(product: ProductUI): string {
+    return formatProductPrice(product, this.translateFn, {
+      pricePrefix: this.translate.instant('common.product.price_prefix'),
+    });
   }
 
   @ViewChild('modalContainer') modalContainer!: ElementRef<HTMLElement>;

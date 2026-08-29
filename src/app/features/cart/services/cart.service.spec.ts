@@ -128,14 +128,14 @@ describe('CartService', () => {
       name: 'Leche Deslactosada',
       imagen: 'leche.jpg',
       unitPrice: 1500,
-      unitLabel: 'litro',
+      unitLabel: '2 litros',
       quantity: 2,
       precioTexto: 'Precio: $1.500 / litro',
       oldPrice: undefined,
       unidad: 'litro',
       isOffer: false,
       discountPercentage: 0,
-      unitQuantity: undefined
+      unitQuantity: 2
     });
 
     expect(service.totalItems()).toBe(2);

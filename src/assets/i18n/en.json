@@ -116,14 +116,35 @@
       }
     },
     "units": {
-      "unidad": "unit",
+      "unidad": {
+        "singular": "unit",
+        "plural": "units"
+      },
+      "litro": {
+        "singular": "liter",
+        "plural": "liters"
+      },
+      "paquete": {
+        "singular": "pack",
+        "plural": "packs"
+      },
+      "caja": {
+        "singular": "box",
+        "plural": "boxes"
+      },
+      "botella": {
+        "singular": "bottle",
+        "plural": "bottles"
+      },
+      "lata": {
+        "singular": "can",
+        "plural": "cans"
+      },
       "kg": "kg",
+      "g": "g",
       "lb": "lb",
-      "litro": "liters",
-      "paquete": "pack",
-      "caja": "box",
-      "botella": "bottle",
-      "lata": "can"
+      "oz": "oz",
+      "ml": "ml"
     },
     "seo": {
       "keywords": "{name}, {category}, hypermarket, offer, dominican republic"

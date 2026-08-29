@@ -8,7 +8,7 @@ export interface CartItem {
   name: string;
   imagen: string;
   unitPrice: number;
-  unitLabel: string;
+  unitLabel?: string;
   quantity: number;
   precioTexto?: string;
   oldPrice?: string;
