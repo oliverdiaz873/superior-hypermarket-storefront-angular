@@ -55,7 +55,7 @@ describe('AboutUsComponent', () => {
     const fixture = TestBed.createComponent(AboutUsComponent);
     fixture.detectChanges();
     const img = fixture.nativeElement.querySelector('img');
-    expect(img.getAttribute('src')).toContain('logo-with-background.jpeg');
+    expect(img.getAttribute('src')).toContain('logo.png');
   });
 
   it('should render the title and description containers', () => {
@@ -75,8 +75,8 @@ describe('AboutUsComponent', () => {
     const fixture = TestBed.createComponent(AboutUsComponent);
     fixture.detectChanges();
     const img = fixture.nativeElement.querySelector('img');
-    expect(img.classList).toContain('w-[250px]');
-    expect(img.classList).toContain('md:w-[350px]');
-    expect(img.classList).toContain('lg:w-[450px]');
+    expect(img.classList).toContain('w-[220px]');
+    expect(img.classList).toContain('md:w-[320px]');
+    expect(img.classList).toContain('lg:w-[400px]');
   });
 });

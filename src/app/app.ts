@@ -14,7 +14,7 @@ const fallbackSeo: SeoConfig = {
   description: `${BRAND_NAME}: tu hipermercado online con alimentos, tecnologia, farmacia, ferreteria, moda y hogar en un solo carrito.`,
   jsonLd: null,
   openGraph: {
-    image: '/assets/images/logo/logo-with-background.jpeg',
+    image: '/assets/images/logo/logo.png',
     type: 'website',
     locale: 'es_DO',
     siteName: BRAND_NAME
