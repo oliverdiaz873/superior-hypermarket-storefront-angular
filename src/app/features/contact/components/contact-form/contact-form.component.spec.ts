@@ -1,9 +1,17 @@
+import '@angular/compiler';
 import { HttpErrorResponse } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 import { ContactFormComponent } from './contact-form.component';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 import { of, throwError } from 'rxjs';
 import { ApiService } from '@core/api/api.service';
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({ name: 'translate', standalone: true })
+class MockTranslatePipe implements PipeTransform {
+  transform(value: string): string { return value; }
+}
+import { signal } from '@angular/core';
 
 function createValidForm(component: ContactFormComponent): void {
   component.form.setValue({
@@ -19,12 +27,13 @@ describe('ContactFormComponent', () => {
   let apiService: { sendContactMessage: ReturnType<typeof vi.fn> };
 
   beforeEach(async () => {
+    TestBed.resetTestingModule();
     const onEvent = { subscribe: vi.fn() };
     translateService = {
       instant: vi.fn((key: string) => key),
       translate: vi.fn((key: string) => key),
       get: vi.fn((key: string) => of(key)),
-      currentLang: 'es',
+      currentLang: signal('es') as unknown as string,
       onTranslationChange: onEvent,
       onLangChange: onEvent,
       onDefaultLangChange: onEvent,
@@ -40,7 +49,10 @@ describe('ContactFormComponent', () => {
       setTranslation: vi.fn(),
       getTranslation: vi.fn(() => Promise.resolve({})),
       stream: vi.fn((key: string) => key),
-    };
+      store: { translations: signal({}) } as unknown as Record<string, unknown>,
+      cachedSignal: vi.fn((key: string) => key),
+      getParsedResult: vi.fn((key: string) => key),
+    } as unknown as Record<string, unknown>;
 
     apiService = { sendContactMessage: vi.fn() };
 
@@ -50,6 +62,10 @@ describe('ContactFormComponent', () => {
         { provide: TranslateService, useValue: translateService },
         { provide: ApiService, useValue: apiService }
       ]
+    });
+    TestBed.overrideComponent(ContactFormComponent, {
+      remove: { imports: [TranslatePipe] },
+      add: { imports: [MockTranslatePipe] }
     });
 
     await TestBed.compileComponents();
@@ -259,6 +275,38 @@ describe('ContactFormComponent', () => {
 
       component.submit();
       expect(onSuccessSpy).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('prefill', () => {
+    it('should prefill nombre and email when initialName/initialEmail provided', () => {
+      const fixture = TestBed.createComponent(ContactFormComponent);
+      const component = fixture.componentInstance;
+      component.initialName = 'Oliver Diaz';
+      component.initialEmail = 'oliver@email.com';
+      fixture.detectChanges();
+      expect(component.form.get('nombre')?.value).toBe('Oliver Diaz');
+      expect(component.form.get('email')?.value).toBe('oliver@email.com');
+    });
+
+    it('should keep nombre and email empty when no initial values', () => {
+      const fixture = TestBed.createComponent(ContactFormComponent);
+      fixture.detectChanges();
+      const component = fixture.componentInstance;
+      expect(component.form.get('nombre')?.value).toBe('');
+      expect(component.form.get('email')?.value).toBe('');
+    });
+
+    it('should keep fields editable after prefill', () => {
+      const fixture = TestBed.createComponent(ContactFormComponent);
+      const component = fixture.componentInstance;
+      component.initialName = 'Oliver Diaz';
+      component.initialEmail = 'oliver@email.com';
+      fixture.detectChanges();
+      component.form.get('nombre')?.setValue('Otro Nombre');
+      component.form.get('email')?.setValue('otro@email.com');
+      expect(component.form.get('nombre')?.value).toBe('Otro Nombre');
+      expect(component.form.get('email')?.value).toBe('otro@email.com');
     });
   });
 });

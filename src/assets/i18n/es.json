@@ -219,6 +219,443 @@
       "hours_text": "Lunes a Domingo, 8:00 AM – 10:00 PM"
     }
   },
+  "help": {
+    "_documentation": {
+      "namespace": "help",
+      "description": "Centro de ayuda y soporte autoservicio",
+      "usage": "Páginas /help, /help/[category], /help/[category]/[topic] y formulario de contacto contextual",
+      "contains": "7 categorías, 21 temas, SEO, hero, categorías y artículos"
+    },
+    "seo": {
+      "index": {
+        "title": "Centro de ayuda",
+        "description": "Encuentra respuestas rápidas sobre pedidos, devoluciones, cuenta, pagos, productos y tiendas en Hipermercado Superior.",
+        "keywords": "ayuda, soporte, centro de ayuda, pedidos, devoluciones, cuenta, pagos, hipermercado",
+        "json_ld_name": "Centro de ayuda - Hipermercado Superior",
+        "json_ld_description": "Centro de ayuda de Hipermercado Superior para resolver dudas sobre pedidos y compras."
+      },
+      "category": {
+        "title_template": "{{category}} - Centro de ayuda",
+        "description_template": "Ayuda sobre {{category}} en Hipermercado Superior."
+      },
+      "topic": {
+        "title_template": "{{topic}} - Centro de ayuda",
+        "description_template": "{{topic}} - Respuestas del centro de ayuda de Hipermercado Superior."
+      }
+    },
+    "hero": {
+      "title": "Centro de ayuda",
+      "subtitle": "¿En qué podemos ayudarte?",
+      "search_placeholder": "Buscar por pedidos, devoluciones, pagos..."
+    },
+    "breadcrumb": {
+      "help": "Ayuda",
+      "help_center": "Centro de ayuda"
+    },
+    "categories": {
+      "orders": "Pedidos",
+      "returns": "Devoluciones y reembolsos",
+      "account": "Cuenta",
+      "payments": "Pagos y facturación",
+      "products": "Productos",
+      "stores": "Tiendas",
+      "other": "Otros"
+    },
+    "category_descriptions": {
+      "orders": "Consulta el estado, cancela o modifica la dirección de tus pedidos.",
+      "returns": "Conoce nuestra política de devoluciones y cómo reportar productos dañados.",
+      "account": "Gestiona tu cuenta, inicio de sesión y datos personales.",
+      "payments": "Información sobre métodos de pago, pedidos pendientes y facturas.",
+      "products": "Disponibilidad, ofertas y cómo encontrar productos.",
+      "stores": "Contacto, horarios y retiro en tienda.",
+      "other": "Privacidad, términos y otras consultas."
+    },
+    "topics": {
+      "orders": {
+        "track": {
+          "title": "¿Dónde está mi pedido?",
+          "seo": {
+            "title": "¿Dónde está mi pedido? - Centro de ayuda",
+            "description": "Consulta el estado de tu pedido en Hipermercado Superior: pendiente, confirmado, en preparación, enviado o completado."
+          },
+          "intro": "Puedes consultar el estado de tu pedido en cualquier momento desde tu cuenta.",
+          "steps": [
+            "Inicia sesión y ve a Mis pedidos.",
+            "Busca el pedido por su número (ej. #ORD-12345) y revisa su estado.",
+            "Los estados son: pendiente, confirmado, en preparación, enviado, completado o cancelado.",
+            "Abre el detalle para ver el historial y la dirección de entrega."
+          ],
+          "note": "Si tu pedido no aparece, verifica que iniciaste sesión con el correo usado en la compra.",
+          "related": "¿Tu pedido está retrasado? Consulta el artículo sobre entregas tardías."
+        },
+        "cancel": {
+          "title": "¿Puedo cancelar mi pedido?",
+          "seo": {
+            "title": "¿Puedo cancelar mi pedido? - Centro de ayuda",
+            "description": "Descubre cuándo y cómo cancelar un pedido en Hipermercado Superior."
+          },
+          "intro": "Puedes cancelar pedidos que estén en estado pendiente o confirmado.",
+          "steps": [
+            "Ve a Mis pedidos y abre el detalle del pedido.",
+            "Si el estado es pendiente o confirmado, verás el botón Cancelar pedido.",
+            "Confirma la cancelación. El reembolso se procesará según el método de pago.",
+            "Si el pedido ya está en preparación o enviado, contáctanos con el número de pedido."
+          ],
+          "note": "La cancelación no es posible una vez el pedido está en preparación o enviado.",
+          "related": "Para devoluciones de productos dañados, consulta Devoluciones y reembolsos."
+        },
+        "address": {
+          "title": "¿Puedo cambiar la dirección de entrega?",
+          "seo": {
+            "title": "Cambiar dirección de entrega - Centro de ayuda",
+            "description": "Cómo gestionar la dirección de entrega de tu pedido en Hipermercado Superior."
+          },
+          "intro": "La dirección se congela al crear el pedido y no puede cambiarse después.",
+          "steps": [
+            "Si aún no has finalizado la compra, cambia la dirección en la pantalla de pago.",
+            "Para futuros pedidos, gestiona tus direcciones en Mi cuenta > Direcciones.",
+            "Puedes marcar una dirección como predeterminada.",
+            "Si te equivocaste al pagar, cancela el pedido (si aún es posible) y crea uno nuevo con la dirección correcta."
+          ],
+          "note": "No es posible editar la dirección de un pedido ya confirmado por motivos de logística.",
+          "related": "Administra tus direcciones antes de comprar para evitar errores."
+        },
+        "late-delivery": {
+          "title": "Mi pedido está retrasado",
+          "seo": {
+            "title": "Mi pedido está retrasado - Centro de ayuda",
+            "description": "Qué hacer si tu pedido de Hipermercado Superior no llega a tiempo."
+          },
+          "intro": "Si tu pedido no llega en la fecha estimada, verifica primero su estado.",
+          "steps": [
+            "Revisa el estado en Mis pedidos > Detalle. Si está en preparación o enviado, la entrega es inminente.",
+            "Verifica que la dirección y el teléfono sean correctos.",
+            "Espera hasta 24 horas adicionales por posibles retrasos logísticos.",
+            "Si no hay actualización, contáctanos desde este artículo con el número de pedido y te ayudamos a rastrearlo."
+          ],
+          "note": "Los pedidos con pago pendiente no se envían hasta confirmar el pago.",
+          "related": "Asocia el número de pedido al contactarnos para agilizar la ayuda."
+        }
+      },
+      "returns": {
+        "policy": {
+          "title": "Política de devoluciones",
+          "seo": {
+            "title": "Política de devoluciones - Centro de ayuda",
+            "description": "Conoce la política de devoluciones de Hipermercado Superior para productos alimentarios y no alimentarios."
+          },
+          "intro": "Trabajamos con productos alimentarios frescos y de consumo, por lo que la política es específica.",
+          "steps": [
+            "Alimentos perecederos (frutas, carnes, lácteos) no admiten devolución salvo que lleguen dañados o con error.",
+            "Productos no perecederos y electrodomésticos pueden reportarse en 48 horas tras la entrega si presentan defectos o error de envío.",
+            "Conserva el empaque y fotos del producto y la etiqueta.",
+            "Contáctanos desde este artículo para registrar tu caso y te indicaremos los pasos."
+          ],
+          "note": "No aceptamos devoluciones por arrepentimiento en perecederos una vez entregados.",
+          "related": "Si tu producto llegó dañado, consulta el artículo específico."
+        },
+        "damaged": {
+          "title": "Producto dañado o incorrecto",
+          "seo": {
+            "title": "Producto dañado o incorrecto - Centro de ayuda",
+            "description": "Cómo reportar un producto dañado o incorrecto en Hipermercado Superior y solicitar solución."
+          },
+          "intro": "Si recibiste un producto dañado, abierto o distinto al solicitado, lo resolvemos.",
+          "steps": [
+            "Toma fotos del producto, etiqueta y empaque.",
+            "Contáctanos eligiendo el pedido afectado y describe el problema.",
+            "Indica si prefieres reembolso o reposición cuando esté disponible.",
+            "Nuestro equipo revisará tu caso y te contactará con la solución."
+          ],
+          "note": "Asociar el número de pedido y fotos acelera la gestión.",
+          "related": "Consulta también cuándo se acredita el reembolso."
+        },
+        "refund": {
+          "title": "¿Cuándo veré mi reembolso?",
+          "seo": {
+            "title": "¿Cuándo veré mi reembolso? - Centro de ayuda",
+            "description": "Plazos y métodos de reembolso en Hipermercado Superior."
+          },
+          "intro": "Los reembolsos se procesan una vez confirmado el caso.",
+          "steps": [
+            "Tras aprobar la devolución, el reembolso se inicia en 24-48 horas.",
+            "Si pagaste con tarjeta, verás el abono en 5-10 días hábiles según tu banco.",
+            "Pagos pendientes cancelados no generan cargo.",
+            "Contáctanos con el número de pedido si no ves el abono en el plazo."
+          ],
+          "note": "No hay reembolsos automáticos; siempre requieren revisión del caso.",
+          "related": "Reporta primero el producto dañado o incorrecto."
+        }
+      },
+      "account": {
+        "create": {
+          "title": "Cómo crear una cuenta",
+          "seo": {
+            "title": "Cómo crear una cuenta - Centro de ayuda",
+            "description": "Crea tu cuenta en Hipermercado Superior para comprar y gestionar tus pedidos."
+          },
+          "intro": "Crear una cuenta te permite guardar direcciones y ver historial de pedidos.",
+          "steps": [
+            "Haz clic en Registrarse en el encabezado.",
+            "Completa nombre, correo y contraseña (mínimo 8 caracteres).",
+            "Confirma la contraseña y acepta los términos.",
+            "Una vez registrado, iniciarás sesión automáticamente."
+          ],
+          "note": "Usa un correo válido al que tengas acceso.",
+          "related": "¿Problemas para iniciar sesión? Consulta el artículo correspondiente."
+        },
+        "login": {
+          "title": "No puedo iniciar sesión",
+          "seo": {
+            "title": "No puedo iniciar sesión - Centro de ayuda",
+            "description": "Soluciones si no puedes iniciar sesión en Hipermercado Superior."
+          },
+          "intro": "Si no puedes acceder, verifica correo y contraseña.",
+          "steps": [
+            "Asegúrate de usar el mismo correo con el que te registraste.",
+            "Verifica mayúsculas y que no haya espacios al copiar la contraseña.",
+            "Si olvidaste la contraseña, usa la opción de recuperación (si está habilitada).",
+            "Si ves 'demasiados intentos', espera unos minutos e intenta de nuevo."
+          ],
+          "note": "Tras varios intentos fallidos aplicamos límite temporal por seguridad.",
+          "related": "¿Aún no tienes cuenta? Regístrate en minutos."
+        },
+        "data": {
+          "title": "Cambiar mis datos personales",
+          "seo": {
+            "title": "Cambiar mis datos personales - Centro de ayuda",
+            "description": "Cómo actualizar nombre y correo de tu cuenta en Hipermercado Superior."
+          },
+          "intro": "Puedes consultar tus datos en Mi cuenta.",
+          "steps": [
+            "Ve a Mi cuenta tras iniciar sesión.",
+            "Allí verás nombre, correo y rol.",
+            "Para cambios que no puedas hacer tú mismo, contáctanos indicando qué dato deseas actualizar.",
+            "Verificaremos tu identidad antes de modificar datos sensibles."
+          ],
+          "note": "Por seguridad, los cambios de correo pueden requerir confirmación.",
+          "related": "Gestiona también tus direcciones desde Direcciones."
+        },
+        "logout": {
+          "title": "Cerrar sesión en otro dispositivo",
+          "seo": {
+            "title": "Cerrar sesión en otro dispositivo - Centro de ayuda",
+            "description": "Cómo cerrar sesión en Hipermercado Superior desde cualquier dispositivo."
+          },
+          "intro": "Puedes cerrar sesión en cualquier momento.",
+          "steps": [
+            "En el menú de cuenta, haz clic en Cerrar sesión.",
+            "Si dejaste la sesión abierta en otro dispositivo, cierra sesión allí también.",
+            "Para mayor seguridad, no compartas tu contraseña.",
+            "Si sospechas uso no autorizado, contáctanos de inmediato."
+          ],
+          "note": "Cerrar sesión no borra tu historial de pedidos.",
+          "related": "Mantén tu contraseña segura y cámbiala periódicamente."
+        }
+      },
+      "payments": {
+        "methods": {
+          "title": "Métodos de pago disponibles",
+          "seo": {
+            "title": "Métodos de pago - Centro de ayuda",
+            "description": "Métodos de pago disponibles en Hipermercado Superior."
+          },
+          "intro": "Ofrecemos opciones de pago seguras para completar tu compra.",
+          "steps": [
+            "Durante el pago verás los métodos habilitados (tarjeta, pago pendiente, etc.).",
+            "Los pagos pendientes requieren confirmación posterior en Mis pedidos.",
+            "No guardamos datos de tarjeta fuera del proveedor de pago.",
+            "Si tu pago falla, intenta de nuevo o prueba otro método."
+          ],
+          "note": "El listado exacto de métodos puede variar según disponibilidad.",
+          "related": "¿Tienes un pedido con pago pendiente? Consulta el artículo específico."
+        },
+        "pending": {
+          "title": "Pagar un pedido pendiente",
+          "seo": {
+            "title": "Pagar un pedido pendiente - Centro de ayuda",
+            "description": "Cómo pagar un pedido en estado pendiente en Hipermercado Superior."
+          },
+          "intro": "Si tu pedido quedó en estado pendiente, puedes pagarlo desde el detalle.",
+          "steps": [
+            "Ve a Mis pedidos y abre el pedido pendiente.",
+            "Si el pago está pendiente, verás el botón Pagar.",
+            "Haz clic en Pagar y sigue las instrucciones.",
+            "Una vez pagado, el estado cambiará a pagado y comenzará la preparación."
+          ],
+          "note": "Los pedidos no se envían hasta que el pago esté confirmado.",
+          "related": "Si el pago falla, inténtalo de nuevo en unos minutos."
+        },
+        "invoice": {
+          "title": "¿Emiten factura o comprobante?",
+          "seo": {
+            "title": "¿Emiten factura o comprobante? - Centro de ayuda",
+            "description": "Información sobre facturas y comprobantes en Hipermercado Superior."
+          },
+          "intro": "Emitimos comprobante por cada compra realizada.",
+          "steps": [
+            "Tras completar tu pedido, recibirás comprobante asociado al número de pedido.",
+            "Si necesitas factura con datos específicos, contáctanos indicando número de pedido y datos fiscales.",
+            "No generamos facturas automáticas con RNC sin solicitud.",
+            "Nuestro equipo te enviará el comprobante correspondiente."
+          ],
+          "note": "La facturación electrónica está en evolución; consulta para casos especiales.",
+          "related": "Incluye siempre el número de pedido al solicitar factura."
+        }
+      },
+      "products": {
+        "availability": {
+          "title": "Producto sin stock o no disponible",
+          "seo": {
+            "title": "Producto sin stock - Centro de ayuda",
+            "description": "Qué hacer si un producto no está disponible en Hipermercado Superior."
+          },
+          "intro": "La disponibilidad cambia según stock en tiempo real.",
+          "steps": [
+            "Si un producto no aparece, intenta buscarlo por nombre o filtrar por categoría.",
+            "Los productos agotados no se muestran como agregables.",
+            "Vuelve a consultar más tarde; el stock se actualiza regularmente.",
+            "Si buscas un producto habitual y no está, contáctanos para informarte."
+          ],
+          "note": "No es posible reservar productos sin stock.",
+          "related": "Descubre productos similares en la misma categoría."
+        },
+        "offers": {
+          "title": "Cómo funcionan las ofertas",
+          "seo": {
+            "title": "Cómo funcionan las ofertas - Centro de ayuda",
+            "description": "Entiende cómo se aplican las ofertas y descuentos en Hipermercado Superior."
+          },
+          "intro": "Las ofertas muestran precio original, precio con descuento y porcentaje.",
+          "steps": [
+            "Ve a la sección Ofertas para ver productos con descuento.",
+            "El precio tachado es el original y el destacado es el precio final.",
+            "No necesitas cupón; el descuento se aplica automáticamente al agregar al carrito.",
+            "Las ofertas tienen disponibilidad limitada y pueden agotarse."
+          ],
+          "note": "El porcentaje se calcula sobre el precio original informado por el proveedor.",
+          "related": "Filtra ofertas por categoría para encontrar lo que buscas."
+        },
+        "search": {
+          "title": "No encuentro un producto",
+          "seo": {
+            "title": "No encuentro un producto - Centro de ayuda",
+            "description": "Cómo buscar productos en Hipermercado Superior."
+          },
+          "intro": "Usa la búsqueda para encontrar productos rápidamente.",
+          "steps": [
+            "Escribe al menos 2 caracteres en la barra de búsqueda del encabezado.",
+            "Puedes filtrar por categoría desde el buscador.",
+            "Revisa la ortografía o prueba con sinónimos (ej. 'refrigerador' vs 'nevera').",
+            "Si aún no aparece, visita la categoría correspondiente o contáctanos."
+          ],
+          "note": "La búsqueda no distingue entre mayúsculas y minúsculas.",
+          "related": "Explora las categorías para descubrir productos relacionados."
+        }
+      },
+      "stores": {
+        "contact": {
+          "title": "Contacto y horarios de atención",
+          "seo": {
+            "title": "Contacto y horarios - Centro de ayuda",
+            "description": "Horarios, teléfono y correo de contacto de Hipermercado Superior."
+          },
+          "intro": "Estamos disponibles todos los días para ayudarte.",
+          "steps": [
+            "Correo: soporte@hipermercadosuperior.com.",
+            "Teléfono: +1 (809) 555-5555.",
+            "Horario: Lunes a Domingo, 8:00 AM – 10:00 PM.",
+            "Para consultas sobre pedidos, incluye el número de pedido para agilizar la respuesta."
+          ],
+          "note": "Los horarios pueden variar en días festivos.",
+          "related": "¿Quieres retirar en tienda? Consulta el artículo de retiro."
+        },
+        "pickup": {
+          "title": "¿Puedo retirar mi pedido en tienda?",
+          "seo": {
+            "title": "¿Puedo retirar mi pedido en tienda? - Centro de ayuda",
+            "description": "Información sobre retiro en tienda en Hipermercado Superior."
+          },
+          "intro": "Actualmente no ofrecemos retiro en tienda como método estándar.",
+          "steps": [
+            "Todos los pedidos se gestionan con entrega a domicilio mediante dirección.",
+            "Asegúrate de registrar tu dirección correctamente en Direcciones.",
+            "Si necesitas coordinación especial, contáctanos antes de comprar.",
+            "Evaluaremos tu caso y te indicaremos si hay alternativa disponible."
+          ],
+          "note": "El retiro en tienda está en evaluación para futuras implementaciones.",
+          "related": "Gestiona tus direcciones para entregas sin inconvenientes."
+        }
+      },
+      "other": {
+        "privacy": {
+          "title": "Privacidad y datos personales",
+          "seo": {
+            "title": "Privacidad y datos personales - Centro de ayuda",
+            "description": "Cómo gestiona Hipermercado Superior la privacidad y protección de datos."
+          },
+          "intro": "Respetamos tu privacidad y protegemos tus datos.",
+          "steps": [
+            "Consulta la Política de Privacidad para saber qué datos recopilamos y cómo los usamos.",
+            "Puedes solicitar acceso, corrección o eliminación de tus datos según la ley vigente.",
+            "No compartimos tus datos con terceros sin tu consentimiento.",
+            "Para ejercer tus derechos, contáctanos indicando tu solicitud y correo asociado."
+          ],
+          "note": "Las solicitudes de privacidad requieren verificación de identidad.",
+          "related": "Lee también los Términos de Uso para condiciones generales."
+        },
+        "other": {
+          "title": "Otras consultas",
+          "seo": {
+            "title": "Otras consultas - Centro de ayuda",
+            "description": "Otras consultas generales para Hipermercado Superior."
+          },
+          "intro": "Si no encontraste tu tema, contáctanos directamente.",
+          "steps": [
+            "Revisa las categorías de ayuda por si tu consulta encaja en otro tema.",
+            "Usa el formulario de contacto indicando categoría y detalle.",
+            "Incluye toda la información relevante (pedido, producto, cuenta).",
+            "Te responderemos en el menor tiempo posible en horario de atención."
+          ],
+          "note": "Cuanto más específico seas, más rápido podremos ayudarte.",
+          "related": "Visita también las páginas legales para información general."
+        }
+      }
+    },
+    "actions": {
+      "contact": "Contactar soporte",
+      "view_orders": "Ver mis pedidos",
+      "view_order": "Ver pedido",
+      "login": "Inicia sesión",
+      "go_help": "Ir al Centro de ayuda",
+      "back_to_category": "Volver a {{category}}",
+      "back_to_help": "Volver al Centro de ayuda",
+      "help": "Ayuda"
+    },
+    "resolution": {
+      "question": "¿Te fue útil este artículo?",
+      "yes": "Sí, gracias",
+      "no": "No, contactar soporte",
+      "thanks": "¡Gracias por tu feedback!",
+      "contact_hint": "¿Necesitas más ayuda? Contáctanos y te respondemos."
+    },
+    "contact_context": {
+      "banner": "¿Buscabas ayuda? Visita el Centro de ayuda para resolverlo más rápido.",
+      "chip_category": "{{category}} > {{topic}}",
+      "chip_order": "Pedido: #{{orderNumber}}",
+      "chip_order_generic": "Pedido: #{{orderId}}",
+      "prefill_prefix": "[{{category}}/{{topic}}]",
+      "prefill_prefix_with_order": "[{{category}}/{{topic}}][pedido:{{orderId}}]",
+      "order_selector_label": "¿Con qué pedido necesitas ayuda?",
+      "order_selector_hint": "Selecciona el pedido relacionado o elige 'No relacionado'.",
+      "order_generic_label": "Número de pedido (opcional)",
+      "order_generic_placeholder": "Ej: ORD-12345",
+      "order_generic_hint": "Solo referencia. Inicia sesión para asociar verificable.",
+      "message_placeholder_with_order": "Cuéntanos qué pasó con tu pedido {{orderNumber}}...",
+      "message_placeholder_topic": "¿En qué podemos ayudarte sobre {{topic}}?"
+    },
+    "empty": "No encontramos el contenido solicitado."
+  },
   "footer": {
     "_documentation": {
       "namespace": "footer",
@@ -235,7 +672,20 @@
     },
     "links": {
       "privacy": "Política de Privacidad",
-      "terms": "Términos de Uso"
+      "terms": "Términos de Uso",
+      "help_center": "Centro de ayuda",
+      "help_orders": "Pedidos",
+      "help_returns": "Devoluciones",
+      "help_payments": "Pagos",
+      "account": "Mi cuenta",
+      "orders": "Mis pedidos",
+      "addresses": "Direcciones",
+      "contact": "Contacto"
+    },
+    "sections": {
+      "help": "Ayuda",
+      "account": "Cuenta",
+      "legal": "Legal"
     }
   },
   "auth": {
@@ -320,7 +770,9 @@
       "logout": "Cerrar sesión",
       "back_home": "Volver al inicio",
       "orders": "Mis pedidos",
-      "addresses": "Mis direcciones"
+      "addresses": "Mis direcciones",
+      "help_cta": "Centro de ayuda",
+      "help_description": "Encuentra respuestas sobre pedidos, devoluciones, pagos y más."
     },
     "errors": {
       "invalid_credentials": "Correo o contraseña incorrectos.",

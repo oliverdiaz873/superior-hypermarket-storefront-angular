@@ -36,6 +36,7 @@ export interface SeoConfig {
   descriptionKey?: string;
   tags?: SeoTag[];
   canonicalPath?: string;
+  alternates?: Record<string, string>;
   jsonLd?: JsonLdSchema | JsonLdSchema[] | null;
   robots?: string;
   openGraph?: OpenGraphConfig;

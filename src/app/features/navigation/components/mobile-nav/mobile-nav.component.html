@@ -85,12 +85,6 @@
       </a>
     </li>
 
-    <li class="mobile-nav-item">
-      <a routerLink="/contact" class="mobile-nav-link" (click)="menuClosed.emit()">
-        {{ 'header.nav.contact' | translate }}
-      </a>
-    </li>
-
     @switch (authStatus()) {
       @case ('loading') {
         <!-- Sesion en restauracion: sin enlaces de cuenta -->

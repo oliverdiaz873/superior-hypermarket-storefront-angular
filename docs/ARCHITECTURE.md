@@ -46,6 +46,9 @@ Main routes:
 ├── /search
 ├── /cart
 ├── /contact
+├── /help
+├── /help/:category
+├── /help/:category/:topic
 ├── /legal/terms
 ├── /legal/privacy
 └── /** (catch-all 404)
@@ -79,11 +82,12 @@ Purpose: Self-contained business modules, organized by feature.
 Existing features:
 - cart/: Shopping cart (service in cart/services/, components in cart/components/)
 - category/: Category pages
-- contact/: Contact form
+- contact/: Contact form with Help contextual banner and authenticated prefill
+- help/: Help Center (help.content.ts 7cat/21topics, guards, 3 pages, HelpLayout, ResolutionBlock)
 - home/: Homepage (HeroCarousel, CategoryBanners, AboutUs)
-- layout/: Layout components (Header, Footer, LegalLayout)
+- layout/: Layout components (Header without Contact in nav, Footer Help+Cuenta+Legal)
 - legal/: Legal pages (terms, privacy)
-- navigation/: Responsive navigation
+- navigation/: Responsive navigation (Desktop/Mobile/Tablet without Contact)
 - not-found/: 404 page
 - offers/: Offers page (data in offers/data/, components in offers/components/)
 - product/: Product detail page

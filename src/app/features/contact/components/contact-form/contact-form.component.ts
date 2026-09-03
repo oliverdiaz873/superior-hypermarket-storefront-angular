@@ -19,7 +19,7 @@
  *  - mensaje: required, 10-500 chars
  */
 import { HttpErrorResponse } from '@angular/common/http';
-import { ChangeDetectionStrategy, Component, inject, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Input, OnChanges, OnInit, output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { NgClass } from '@angular/common';
@@ -34,16 +34,36 @@ import { ContactFormService } from '../../services/contact-form.service';
   styleUrl: './contact-form.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ContactFormComponent {
+export class ContactFormComponent implements OnInit, OnChanges {
   private readonly fb = inject(FormBuilder);
   private readonly translate = inject(TranslateService);
   private readonly validation = inject(ContactFormService);
   private readonly api = inject(ApiService);
 
+  @Input() initialName?: string;
+  @Input() initialEmail?: string;
+
   readonly success = output<void>();
 
   isSubmitting = false;
   submitError = '';
+
+  ngOnInit(): void {
+    this.applyInitialValues();
+  }
+
+  ngOnChanges(): void {
+    this.applyInitialValues();
+  }
+
+  private applyInitialValues(): void {
+    if (this.initialName && !this.form.get('nombre')?.value && !this.form.get('nombre')?.dirty) {
+      this.form.get('nombre')?.setValue(this.initialName);
+    }
+    if (this.initialEmail && !this.form.get('email')?.value && !this.form.get('email')?.dirty) {
+      this.form.get('email')?.setValue(this.initialEmail);
+    }
+  }
 
   readonly form = this.fb.nonNullable.group({
     nombre: ['', [this.validation.trimmedRequired(), Validators.minLength(2), Validators.maxLength(50), this.validation.alphabeticValidator]],
