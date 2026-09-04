@@ -116,14 +116,35 @@
       }
     },
     "units": {
-      "unidad": "unit",
+      "unidad": {
+        "singular": "unit",
+        "plural": "units"
+      },
+      "litro": {
+        "singular": "liter",
+        "plural": "liters"
+      },
+      "paquete": {
+        "singular": "pack",
+        "plural": "packs"
+      },
+      "caja": {
+        "singular": "box",
+        "plural": "boxes"
+      },
+      "botella": {
+        "singular": "bottle",
+        "plural": "bottles"
+      },
+      "lata": {
+        "singular": "can",
+        "plural": "cans"
+      },
       "kg": "kg",
+      "g": "g",
       "lb": "lb",
-      "litro": "liters",
-      "paquete": "pack",
-      "caja": "box",
-      "botella": "bottle",
-      "lata": "can"
+      "oz": "oz",
+      "ml": "ml"
     },
     "seo": {
       "keywords": "{name}, {category}, hypermarket, offer, dominican republic"
@@ -198,6 +219,443 @@
       "hours_text": "Monday to Sunday, 8:00 AM – 10:00 PM"
     }
   },
+  "help": {
+    "_documentation": {
+      "namespace": "help",
+      "description": "Help center and self-service support",
+      "usage": "Pages /help, /help/[category], /help/[category]/[topic] and contextual contact form",
+      "contains": "7 categories, 21 topics, SEO, hero, categories and articles"
+    },
+    "seo": {
+      "index": {
+        "title": "Help Center",
+        "description": "Find quick answers about orders, returns, account, payments, products and stores at Superior Hypermarket.",
+        "keywords": "help, support, help center, orders, returns, account, payments, hypermarket",
+        "json_ld_name": "Help Center - Superior Hypermarket",
+        "json_ld_description": "Help Center of Superior Hypermarket to solve doubts about orders and shopping."
+      },
+      "category": {
+        "title_template": "{{category}} - Help Center",
+        "description_template": "Help about {{category}} at Superior Hypermarket."
+      },
+      "topic": {
+        "title_template": "{{topic}} - Help Center",
+        "description_template": "{{topic}} - Help Center answers from Superior Hypermarket."
+      }
+    },
+    "hero": {
+      "title": "Help Center",
+      "subtitle": "How can we help you?",
+      "search_placeholder": "Search for orders, returns, payments..."
+    },
+    "breadcrumb": {
+      "help": "Help",
+      "help_center": "Help Center"
+    },
+    "categories": {
+      "orders": "Orders",
+      "returns": "Returns & refunds",
+      "account": "Account",
+      "payments": "Payments & billing",
+      "products": "Products",
+      "stores": "Stores",
+      "other": "Other"
+    },
+    "category_descriptions": {
+      "orders": "Check status, cancel or change delivery address of your orders.",
+      "returns": "Learn our return policy and how to report damaged products.",
+      "account": "Manage your account, login and personal data.",
+      "payments": "Information about payment methods, pending orders and invoices.",
+      "products": "Availability, offers and how to find products.",
+      "stores": "Contact, hours and in-store pickup.",
+      "other": "Privacy, terms and other inquiries."
+    },
+    "topics": {
+      "orders": {
+        "track": {
+          "title": "Where is my order?",
+          "seo": {
+            "title": "Where is my order? - Help Center",
+            "description": "Check your order status at Superior Hypermarket: pending, confirmed, processing, shipped or completed."
+          },
+          "intro": "You can check your order status anytime from your account.",
+          "steps": [
+            "Sign in and go to My Orders.",
+            "Find the order by its number (e.g. #ORD-12345) and check its status.",
+            "Statuses are: pending, confirmed, processing, shipped, completed or cancelled.",
+            "Open details to see history and delivery address."
+          ],
+          "note": "If your order does not appear, verify you signed in with the purchase email.",
+          "related": "Is your order delayed? Check the late delivery article."
+        },
+        "cancel": {
+          "title": "Can I cancel my order?",
+          "seo": {
+            "title": "Can I cancel my order? - Help Center",
+            "description": "Learn when and how to cancel an order at Superior Hypermarket."
+          },
+          "intro": "You can cancel orders that are pending or confirmed.",
+          "steps": [
+            "Go to My Orders and open order details.",
+            "If status is pending or confirmed, you will see the Cancel order button.",
+            "Confirm cancellation. Refund will be processed per payment method.",
+            "If already processing or shipped, contact us with the order number."
+          ],
+          "note": "Cancellation is not possible once the order is processing or shipped.",
+          "related": "For damaged product returns, see Returns & refunds."
+        },
+        "address": {
+          "title": "Can I change the delivery address?",
+          "seo": {
+            "title": "Can I change the delivery address? - Help Center",
+            "description": "How to manage delivery address of your order at Superior Hypermarket."
+          },
+          "intro": "Address is frozen when the order is created and cannot be changed afterwards.",
+          "steps": [
+            "If you have not checked out yet, change address at checkout.",
+            "For future orders, manage addresses in My Account > Addresses.",
+            "You can set an address as default.",
+            "If you made a mistake, cancel the order (if still possible) and create a new one with the correct address."
+          ],
+          "note": "Order address cannot be edited once confirmed for logistics reasons.",
+          "related": "Manage your addresses before purchase to avoid mistakes."
+        },
+        "late-delivery": {
+          "title": "My order is delayed",
+          "seo": {
+            "title": "My order is delayed - Help Center",
+            "description": "What to do if your Superior Hypermarket order does not arrive on time."
+          },
+          "intro": "If your order does not arrive on the estimated date, first check its status.",
+          "steps": [
+            "Check status in My Orders > Details. If processing or shipped, delivery is imminent.",
+            "Verify address and phone are correct.",
+            "Wait up to 24 additional hours for logistics delays.",
+            "If no update, contact us from this article with the order number and we will track it."
+          ],
+          "note": "Orders with pending payment are not shipped until payment is confirmed.",
+          "related": "Associate order number when contacting us to speed up help."
+        }
+      },
+      "returns": {
+        "policy": {
+          "title": "Return policy",
+          "seo": {
+            "title": "Return policy - Help Center",
+            "description": "Learn the return policy of Superior Hypermarket for food and non-food products."
+          },
+          "intro": "We work with fresh and consumable food products, so the policy is specific.",
+          "steps": [
+            "Perishable foods (fruits, meats, dairy) are not returnable unless damaged or mistaken.",
+            "Non-perishables and appliances can be reported within 48h after delivery if defective or mistaken.",
+            "Keep packaging and photos of product and label.",
+            "Contact us from this article to register your case and we will guide you."
+          ],
+          "note": "We do not accept returns for remorse on perishables once delivered.",
+          "related": "If your product arrived damaged, check the specific article."
+        },
+        "damaged": {
+          "title": "Damaged or incorrect product",
+          "seo": {
+            "title": "Damaged or incorrect product - Help Center",
+            "description": "How to report a damaged or incorrect product at Superior Hypermarket and request a solution."
+          },
+          "intro": "If you received a damaged, opened or different product, we will solve it.",
+          "steps": [
+            "Take photos of product, label and packaging.",
+            "Contact us selecting the affected order and describe the issue.",
+            "Indicate if you prefer refund or replacement when available.",
+            "Our team will review your case and contact you with a solution."
+          ],
+          "note": "Associating order number and photos speeds up handling.",
+          "related": "Also check when your refund will be credited."
+        },
+        "refund": {
+          "title": "When will I see my refund?",
+          "seo": {
+            "title": "When will I see my refund? - Help Center",
+            "description": "Refund timelines and methods at Superior Hypermarket."
+          },
+          "intro": "Refunds are processed once the case is confirmed.",
+          "steps": [
+            "After approving the return, refund is initiated within 24-48 hours.",
+            "If paid by card, you will see credit in 5-10 business days per your bank.",
+            "Cancelled pending payments generate no charge.",
+            "Contact us with order number if you do not see credit in time."
+          ],
+          "note": "There are no automatic refunds; they always require case review.",
+          "related": "First report the damaged or incorrect product."
+        }
+      },
+      "account": {
+        "create": {
+          "title": "How to create an account",
+          "seo": {
+            "title": "How to create an account - Help Center",
+            "description": "Create your Superior Hypermarket account to shop and manage orders."
+          },
+          "intro": "Creating an account lets you save addresses and see order history.",
+          "steps": [
+            "Click Register in the header.",
+            "Complete name, email and password (min 8 chars).",
+            "Confirm password and accept terms.",
+            "Once registered, you will be signed in automatically."
+          ],
+          "note": "Use a valid email you can access.",
+          "related": "Trouble signing in? Check the related article."
+        },
+        "login": {
+          "title": "I cannot sign in",
+          "seo": {
+            "title": "I cannot sign in - Help Center",
+            "description": "Solutions if you cannot sign in to Superior Hypermarket."
+          },
+          "intro": "If you cannot log in, check email and password.",
+          "steps": [
+            "Make sure you use the same email you registered with.",
+            "Check caps and no trailing spaces when copying password.",
+            "If you forgot password, use recovery option (if enabled).",
+            "If you see 'too many attempts', wait a few minutes and try again."
+          ],
+          "note": "After several failed attempts we apply temporary limit for security.",
+          "related": "Still no account? Register in minutes."
+        },
+        "data": {
+          "title": "Change my personal data",
+          "seo": {
+            "title": "Change my personal data - Help Center",
+            "description": "How to update name and email of your Superior Hypermarket account."
+          },
+          "intro": "You can view your data in My account.",
+          "steps": [
+            "Go to My account after signing in.",
+            "There you will see name, email and role.",
+            "For changes you cannot do yourself, contact us indicating what to update.",
+            "We will verify identity before modifying sensitive data."
+          ],
+          "note": "Email changes may require confirmation for security.",
+          "related": "Also manage your addresses from Addresses."
+        },
+        "logout": {
+          "title": "Sign out on another device",
+          "seo": {
+            "title": "Sign out on another device - Help Center",
+            "description": "How to sign out of Superior Hypermarket from any device."
+          },
+          "intro": "You can sign out at any time.",
+          "steps": [
+            "In account menu, click Sign out.",
+            "If you left session open on another device, sign out there as well.",
+            "For security, do not share your password.",
+            "If you suspect unauthorized use, contact us immediately."
+          ],
+          "note": "Signing out does not delete your order history.",
+          "related": "Keep your password safe and change it periodically."
+        }
+      },
+      "payments": {
+        "methods": {
+          "title": "Available payment methods",
+          "seo": {
+            "title": "Available payment methods - Help Center",
+            "description": "Available payment methods at Superior Hypermarket."
+          },
+          "intro": "We offer secure payment options to complete your purchase.",
+          "steps": [
+            "During checkout you will see enabled methods (card, pending payment, etc.).",
+            "Pending payments require later confirmation in My orders.",
+            "We do not store card data outside payment provider.",
+            "If payment fails, try again or try another method."
+          ],
+          "note": "Exact method list may vary by availability.",
+          "related": "Do you have a pending payment order? Check the specific article."
+        },
+        "pending": {
+          "title": "Pay a pending order",
+          "seo": {
+            "title": "Pay a pending order - Help Center",
+            "description": "How to pay an order in pending status at Superior Hypermarket."
+          },
+          "intro": "If your order remained pending, you can pay it from details.",
+          "steps": [
+            "Go to My orders and open the pending order.",
+            "If payment is pending, you will see the Pay button.",
+            "Click Pay and follow instructions.",
+            "Once paid, status will change to paid and preparation will start."
+          ],
+          "note": "Orders are not shipped until payment is confirmed.",
+          "related": "If payment fails, try again in a few minutes."
+        },
+        "invoice": {
+          "title": "Do you issue an invoice?",
+          "seo": {
+            "title": "Do you issue an invoice? - Help Center",
+            "description": "Information about invoices and receipts at Superior Hypermarket."
+          },
+          "intro": "We issue a receipt for every purchase.",
+          "steps": [
+            "After completing your order, you will get a receipt tied to order number.",
+            "If you need invoice with specific data, contact us with order number and fiscal data.",
+            "We do not generate automatic RNC invoices without request.",
+            "Our team will send the corresponding receipt."
+          ],
+          "note": "Electronic invoicing is evolving; ask for special cases.",
+          "related": "Always include order number when requesting invoice."
+        }
+      },
+      "products": {
+        "availability": {
+          "title": "Product out of stock or unavailable",
+          "seo": {
+            "title": "Product out of stock - Help Center",
+            "description": "What to do if a product is not available at Superior Hypermarket."
+          },
+          "intro": "Availability changes with real-time stock.",
+          "steps": [
+            "If a product does not appear, try searching by name or filtering by category.",
+            "Out-of-stock products are not shown as addable.",
+            "Check again later; stock updates regularly.",
+            "If you look for a habitual product and it is missing, contact us to inform you."
+          ],
+          "note": "It is not possible to reserve out-of-stock products.",
+          "related": "Discover similar products in same category."
+        },
+        "offers": {
+          "title": "How offers work",
+          "seo": {
+            "title": "How offers work - Help Center",
+            "description": "Understand how offers and discounts work at Superior Hypermarket."
+          },
+          "intro": "Offers show original price, discounted price and percentage.",
+          "steps": [
+            "Go to Offers to see discounted products.",
+            "Strikethrough price is original and highlighted is final price.",
+            "No coupon needed; discount applies automatically when adding to cart.",
+            "Offers have limited availability and may run out."
+          ],
+          "note": "Percentage is calculated over original price reported by supplier.",
+          "related": "Filter offers by category to find what you need."
+        },
+        "search": {
+          "title": "I cannot find a product",
+          "seo": {
+            "title": "I cannot find a product - Help Center",
+            "description": "How to search for products at Superior Hypermarket."
+          },
+          "intro": "Use search to find products quickly.",
+          "steps": [
+            "Type at least 2 chars in header search bar.",
+            "You can filter by category from search.",
+            "Check spelling or try synonyms (e.g., 'fridge' vs 'refrigerator').",
+            "If still not found, visit related category or contact us."
+          ],
+          "note": "Search is case-insensitive.",
+          "related": "Explore categories to discover related products."
+        }
+      },
+      "stores": {
+        "contact": {
+          "title": "Contact and support hours",
+          "seo": {
+            "title": "Contact and hours - Help Center",
+            "description": "Hours, phone and contact email of Superior Hypermarket."
+          },
+          "intro": "We are available every day to help you.",
+          "steps": [
+            "Email: soporte@hipermercadosuperior.com.",
+            "Phone: +1 (809) 555-5555.",
+            "Hours: Monday to Sunday, 8:00 AM – 10:00 PM.",
+            "For order inquiries, include order number to speed up response."
+          ],
+          "note": "Hours may vary on holidays.",
+          "related": "Want to pick up in store? Check pickup article."
+        },
+        "pickup": {
+          "title": "Can I pick up my order in store?",
+          "seo": {
+            "title": "Can I pick up my order in store? - Help Center",
+            "description": "Information about in-store pickup at Superior Hypermarket."
+          },
+          "intro": "We currently do not offer standard in-store pickup.",
+          "steps": [
+            "All orders are handled with home delivery via address.",
+            "Make sure to register your address correctly in Addresses.",
+            "If you need special coordination, contact us before purchase.",
+            "We will evaluate your case and indicate if alternative is available."
+          ],
+          "note": "In-store pickup is under evaluation for future.",
+          "related": "Manage your addresses for smooth deliveries."
+        }
+      },
+      "other": {
+        "privacy": {
+          "title": "Privacy and personal data",
+          "seo": {
+            "title": "Privacy and personal data - Help Center",
+            "description": "How Superior Hypermarket handles privacy and data protection."
+          },
+          "intro": "We respect your privacy and protect your data.",
+          "steps": [
+            "Check Privacy Policy to learn what data we collect and how we use it.",
+            "You can request access, correction or deletion per applicable law.",
+            "We do not share your data with third parties without consent.",
+            "To exercise rights, contact us indicating request and associated email."
+          ],
+          "note": "Privacy requests require identity verification.",
+          "related": "Also read Terms of Use for general conditions."
+        },
+        "other": {
+          "title": "Other inquiries",
+          "seo": {
+            "title": "Other inquiries - Help Center",
+            "description": "Other general inquiries for Superior Hypermarket."
+          },
+          "intro": "If you did not find your topic, contact us directly.",
+          "steps": [
+            "Check help categories in case your inquiry fits another topic.",
+            "Use contact form indicating category and detail.",
+            "Include all relevant info (order, product, account).",
+            "We will respond as soon as possible within support hours."
+          ],
+          "note": "The more specific you are, the faster we can help.",
+          "related": "Also visit legal pages for general info."
+        }
+      }
+    },
+    "actions": {
+      "contact": "Contact support",
+      "view_orders": "View my orders",
+      "view_order": "View order",
+      "login": "Sign in",
+      "go_help": "Go to Help Center",
+      "back_to_category": "Back to {{category}}",
+      "back_to_help": "Back to Help Center",
+      "help": "Help"
+    },
+    "resolution": {
+      "question": "Was this article helpful?",
+      "yes": "Yes, thanks",
+      "no": "No, contact support",
+      "thanks": "Thanks for your feedback!",
+      "contact_hint": "Need more help? Contact us and we will respond."
+    },
+    "contact_context": {
+      "banner": "Looking for help? Visit the Help Center for faster answers.",
+      "chip_category": "{{category}} > {{topic}}",
+      "chip_order": "Order: #{{orderNumber}}",
+      "chip_order_generic": "Order: #{{orderId}}",
+      "prefill_prefix": "[{{category}}/{{topic}}]",
+      "prefill_prefix_with_order": "[{{category}}/{{topic}}][order:{{orderId}}]",
+      "order_selector_label": "Which order do you need help with?",
+      "order_selector_hint": "Select related order or choose 'Not related'.",
+      "order_generic_label": "Order number (optional)",
+      "order_generic_placeholder": "E.g: ORD-12345",
+      "order_generic_hint": "Just reference. Sign in to associate verifiably.",
+      "message_placeholder_with_order": "Tell us what happened with your order {{orderNumber}}...",
+      "message_placeholder_topic": "How can we help you about {{topic}}?"
+    },
+    "empty": "We could not find the requested content."
+  },
   "footer": {
     "_documentation": {
       "namespace": "footer",
@@ -214,7 +672,20 @@
     },
     "links": {
       "privacy": "Privacy Policy",
-      "terms": "Terms of Use"
+      "terms": "Terms of Use",
+      "help_center": "Help Center",
+      "help_orders": "Orders",
+      "help_returns": "Returns",
+      "help_payments": "Payments",
+      "account": "My account",
+      "orders": "My orders",
+      "addresses": "Addresses",
+      "contact": "Contact"
+    },
+    "sections": {
+      "help": "Help",
+      "account": "Account",
+      "legal": "Legal"
     }
   },
   "auth": {
@@ -299,7 +770,9 @@
       "logout": "Log out",
       "back_home": "Back to home",
       "orders": "My orders",
-      "addresses": "My addresses"
+      "addresses": "My addresses",
+      "help_cta": "Help Center",
+      "help_description": "Find answers about orders, returns, payments and more."
     },
     "errors": {
       "invalid_credentials": "Incorrect email or password.",
@@ -760,13 +1233,7 @@
     "bombillas": {
       "name": "Incandescent Light Bulbs",
       "description": "Illuminate your spaces with our high-quality incandescent light bulbs featuring reliable performance.",
-      "specs": [
-        "Type: Incandescent",
-        "Power: 60W",
-        "Socket: E27",
-        "Warm light",
-        "Economical"
-      ]
+      "specs": ["Type: Incandescent", "Power: 60W", "Socket: E27", "Warm light", "Economical"]
     },
     "bombillas_led": {
       "name": "LED Light Bulbs",

@@ -72,6 +72,8 @@ Core documentation:
 - [Documentation Migration Plan](docs/DOCS_MIGRATION_PLAN.md)
 
 Features:
+- [Help Center](docs/features/help.md)
+- [Contact](docs/features/contact.md)
 - [Cart](docs/features/cart.md)
 - [Products](docs/features/products.md)
 - [Search](docs/features/search.md)
@@ -95,7 +97,8 @@ This application consumes the centralized REST API provided by
 - Offers page with filtering and discount badges.
 - Client-side search system with normalized text matching.
 - Client-side cart using Angular Signals and `localStorage`.
-- Contact form with client-side validation.
+- Public Help Center (`/help`, 7 categories, 21 topics) with contextual Contact (`/contact?category&topic`) and authenticated prefill.
+- Contact form with contextual Help banner and authenticated prefill.
 - Legal pages using translation content.
 - Responsive desktop, tablet, and mobile navigation.
 

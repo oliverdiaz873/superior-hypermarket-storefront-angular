@@ -28,6 +28,8 @@ Organizados por namespaces:
   "offers": { ... },
   "search": { ... },
   "contact": { ... },
+  "help": { ... },      // Help Center 7cat/21topics, seo, hero, category_descriptions, topics, actions, resolution, contact_context
+  "auth": { ... },      // Includes account.help_cta/help_description for Account→Help
   "legal": { ... },
   "products": { ... }   // Dynamic product translations (name, description, specs)
 }

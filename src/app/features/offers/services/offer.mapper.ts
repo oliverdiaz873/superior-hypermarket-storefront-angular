@@ -11,16 +11,16 @@ import { ProductUI } from '@features/products/models/product-ui.interface';
  *   se toman del backend tal cual, sin cálculos locales.
  * - `categoryId` → `categoria` (los mismos slugs que filtran las ofertas).
  * - `url` e `imagen` se resuelven en el frontend (igual que F5.2).
+ * - `precioTexto` representa SOLO el precio base (precio con descuento);
+ *   la presentación de unidad/cantidad se delega a `formatProductPrice()` /
+ *   `formatUnitLabel()` en `price-utils.ts`.
  */
 export function mapApiOfferToProductUI(api: ApiOffer): ProductUI {
   const imagen = resolveProductImageUrl(api.image) ?? '';
   const unit = api.unit ?? '';
   const quantity = api.unitQuantity;
 
-  const hasUnitBlock = Boolean(unit || (quantity != null && quantity > 1));
-  const precioTexto = hasUnitBlock
-    ? `Precio: $${api.discountPrice.toLocaleString('en-US')} / ${quantity ?? 1} ${unit}`.trim()
-    : `Precio: $${api.discountPrice.toLocaleString('en-US')}`;
+  const precioTexto = `Precio: $${api.discountPrice.toLocaleString('en-US')}`;
 
   return {
     id: api.id,

@@ -1,6 +1,25 @@
 <footer class="footer-global">
   <div class="footer-content">
-    <small>&copy; {{ currentYear }} {{ 'footer.company_name' | translate }}. {{ 'footer.rights_reserved' | translate }}</small>
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h4 class="footer-section-title">{{ 'footer.sections.help' | translate }}</h4>
+        <a routerLink="/help" [title]="'footer.links.help_center' | translate">{{ 'footer.links.help_center' | translate }}</a>
+        <a routerLink="/contact" [title]="'footer.links.contact' | translate">{{ 'footer.links.contact' | translate }}</a>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-section-title">{{ 'footer.sections.account' | translate }}</h4>
+        <a routerLink="/account" [title]="'footer.links.account' | translate">{{ 'footer.links.account' | translate }}</a>
+        <a routerLink="/orders" [title]="'footer.links.orders' | translate">{{ 'footer.links.orders' | translate }}</a>
+        <a routerLink="/addresses" [title]="'footer.links.addresses' | translate">{{ 'footer.links.addresses' | translate }}</a>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-section-title">{{ 'footer.sections.legal' | translate }}</h4>
+        <a routerLink="/legal/privacy" [title]="'footer.links.privacy' | translate">{{ 'footer.links.privacy' | translate }}</a>
+        <a routerLink="/legal/terms" [title]="'footer.links.terms' | translate">{{ 'footer.links.terms' | translate }}</a>
+      </div>
+    </div>
 
     <div class="social-icons">
       <a href="#" target="_blank" rel="nofollow noopener noreferrer"
@@ -20,14 +39,6 @@
       </a>
     </div>
 
-    <div class="footer-links">
-      <a routerLink="/legal/privacy" [title]="'footer.links.privacy' | translate">
-        {{ 'footer.links.privacy' | translate }}
-      </a>
-      <span class="separator">|</span>
-      <a routerLink="/legal/terms" [title]="'footer.links.terms' | translate">
-        {{ 'footer.links.terms' | translate }}
-      </a>
-    </div>
+    <small>&copy; {{ currentYear }} {{ 'footer.company_name' | translate }}. {{ 'footer.rights_reserved' | translate }}</small>
   </div>
 </footer>

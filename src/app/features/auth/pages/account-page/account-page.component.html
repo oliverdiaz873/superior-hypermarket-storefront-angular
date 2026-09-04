@@ -70,7 +70,9 @@
       <nav class="account-links mb-6">
         <a routerLink="/orders" class="auth-link">{{ 'auth.account.orders' | translate }}</a>
         <a routerLink="/addresses" class="auth-link">{{ 'auth.account.addresses' | translate }}</a>
+        <a routerLink="/help" class="auth-link">{{ 'auth.account.help_cta' | translate }}</a>
       </nav>
+      <p class="text-xs text-center opacity-60 mb-6">{{ 'auth.account.help_description' | translate }}</p>
 
       <button type="button" [disabled]="isLoggingOut()" class="auth-submit w-full" (click)="logout()">
         {{ 'auth.account.logout' | translate }}

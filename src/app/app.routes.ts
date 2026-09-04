@@ -3,6 +3,7 @@ import { SeoConfig } from '@core/types/seo';
 import { BRAND_NAME } from '@core/constants';
 import { ShopLayoutComponent } from './layouts/shop-layout/shop-layout.component';
 import { requireAuthGuard, redirectIfAuthenticatedGuard } from './features/auth/guards/auth.guards';
+import { helpCategoryGuard, helpTopicGuard } from './features/help/guards/help.guard';
 
 const seo = (config: SeoConfig) => config;
 
@@ -79,6 +80,52 @@ export const routes: Routes = [
               description: 'Soporte de compras, entregas y disponibilidad de productos.',
               url: '/contact'
             }
+          })
+        }
+      },
+      {
+        path: 'help',
+        loadComponent: () => import('./features/help/pages/help-page/help-page.component').then(m => m.HelpPageComponent),
+        data: {
+          seo: seo({
+            titleKey: 'help.seo.index.title',
+            descriptionKey: 'help.seo.index.description',
+            canonicalPath: '/help',
+            jsonLd: null
+          })
+        }
+      },
+      {
+        path: 'help/:category',
+        canActivate: [helpCategoryGuard],
+        loadComponent: () => import('./features/help/pages/help-category-page/help-category-page.component').then(m => m.HelpCategoryPageComponent),
+        data: {
+          seo: seo({
+            canonicalPath: '/help',
+            jsonLd: null
+          })
+        }
+      },
+      {
+        path: 'help/:category/:topic',
+        canActivate: [helpTopicGuard],
+        loadComponent: () => import('./features/help/pages/help-topic-page/help-topic-page.component').then(m => m.HelpTopicPageComponent),
+        data: {
+          seo: seo({
+            canonicalPath: '/help',
+            jsonLd: null
+          })
+        }
+      },
+      {
+        path: 'not-found',
+        loadComponent: () => import('./features/not-found/not-found-page.component').then(m => m.NotFoundPageComponent),
+        data: {
+          seo: seo({
+            titleKey: 'notFound.seo.title',
+            descriptionKey: 'notFound.seo.description',
+            jsonLd: null,
+            robots: 'noindex, nofollow'
           })
         }
       },

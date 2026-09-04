@@ -45,6 +45,7 @@ export class SeoService {
 
     this.setTags(config.tags ?? []);
     this.setCanonical(config.canonicalPath);
+    this.setHreflang(config.alternates);
     this.setRobots(config.robots);
 
     const pageSchemas = config.jsonLd
@@ -118,6 +119,19 @@ export class SeoService {
     }
 
     canonical.setAttribute('href', href);
+  }
+
+  setHreflang(alternates?: Record<string, string>): void {
+    const selector = 'link[rel="alternate"][hreflang]';
+    this.document.querySelectorAll(selector).forEach(el => el.remove());
+    if (!alternates) return;
+    for (const [hreflang, href] of Object.entries(alternates)) {
+      const link = this.document.createElement('link');
+      link.setAttribute('rel', 'alternate');
+      link.setAttribute('hreflang', hreflang);
+      link.setAttribute('href', this.absoluteUrl(href));
+      this.document.head.appendChild(link);
+    }
   }
 
   setJsonLd(schemas: JsonLdSchema | JsonLdSchema[] | null): void {

@@ -2,6 +2,24 @@
   background: #1a1a1c;
 }
 
+.help-contact-banner {
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  background: rgba(255, 204, 0, 0.08);
+  border: 1px solid rgba(255, 204, 0, 0.2);
+  border-radius: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: #fde68a;
+  line-height: 1.5;
+}
+
+.help-contact-banner a {
+  color: #ffcc00;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 .info-item p {
   color: rgba(255, 255, 255, 0.9);
   font-size: 0.95rem;

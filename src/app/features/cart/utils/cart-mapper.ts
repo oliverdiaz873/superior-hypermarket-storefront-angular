@@ -16,7 +16,10 @@ export const toUiCartItem = (item: ApiCartItem): CartItem => ({
   name: item.name,
   imagen: resolveProductImageUrl(item.image) ?? '',
   unitPrice: item.unitPrice,
-  unitLabel: item.unit?.trim() || 'unidad',
+  unitLabel: (() => {
+    const raw = item.unit?.trim();
+    return raw && raw.length > 0 ? raw : undefined;
+  })(),
   quantity: item.quantity,
   oldPrice: item.originalPrice != null ? String(item.originalPrice) : undefined,
   isOffer: item.isOffer,

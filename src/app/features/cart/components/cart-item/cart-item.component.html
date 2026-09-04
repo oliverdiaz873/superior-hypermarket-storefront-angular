@@ -1,1 +1,51 @@
-<div class="cart-item" [class.cart-item--removing]="isRemoving">  <a [routerLink]="['/product', item.productId]" class="cart-item__image-link" [attr.aria-label]="'common.product.view_details' | translate: { name: (item.productId | productTranslate:item.name) }">    <div class="cart-item__image-container">      @if (isOffer) {        <div class="cart-item__badge-wrapper">          <app-offer-badge [discountPercentage]="discountPercentage"></app-offer-badge>        </div>      }      <img [src]="item.imagen" [alt]="(item.productId | productTranslate:item.name)" width="100" height="100" loading="lazy" class="cart-item__image" />    </div>  </a>  <div class="cart-item__content">    <div class="cart-item__header">      <a [routerLink]="['/product', item.productId]" class="cart-item__name-link" [attr.aria-label]="'common.product.view_details' | translate: { name: (item.productId | productTranslate:item.name) }">        <h3 class="cart-item__name">{{ item.productId | productTranslate:item.name }}</h3>      </a>      <button        type="button"        (click)="onRemoveClick()"        class="cart-item__remove-icon"        [attr.aria-label]="'common.product.remove' | translate"        [title]="'common.product.remove' | translate">        <app-icon name="trash" className="h-5 w-5"></app-icon>      </button>    </div>    <div class="cart-item__variant">      <span class="cart-item__unit">{{ getFormattedPrice(item.unitPrice) }} / {{ item.unitQuantity && item.unitQuantity > 1 ? item.unitQuantity + ' ' : '' }}{{ ('common.units.' + item.unitLabel) | translate }}</span>    </div>    <div class="cart-item__footer">      <div class="cart-item__price-block">        @if (isOffer) {          <ins class="cart-item__new-price">{{ getFormattedPrice(item.unitPrice) }}</ins>          <del class="cart-item__old-price">{{ getOldPriceDisplay() }}</del>        } @else {          <span class="cart-item__price">{{ getFormattedPrice(item.unitPrice) }}</span>        }      </div>      <app-quantity-controls        [quantity]="item.quantity"        [ariaLabels]="{          decrease: 'common.cart.decrease_qty' | translate,          increase: 'common.cart.increase_qty' | translate        }"        (decrease)="onDecrease()"        (increase)="onIncrease()">      </app-quantity-controls>    </div>  </div></div>
+<div class="cart-item" [class.cart-item--removing]="isRemoving">
+  <a [routerLink]="['/product', item.productId]" class="cart-item__image-link" [attr.aria-label]="'common.product.view_details' | translate: { name: (item.productId | productTranslate:item.name) }">
+    <div class="cart-item__image-container">
+      @if (isOffer) {
+        <div class="cart-item__badge-wrapper">
+          <app-offer-badge [discountPercentage]="discountPercentage"></app-offer-badge>
+        </div>
+      }
+      <img [src]="getImageUrl(item.imagen)" [alt]="(item.productId | productTranslate:item.name)" width="100" height="100" loading="lazy" class="cart-item__image" />
+    </div>
+  </a>
+  <div class="cart-item__content">
+    <div class="cart-item__header">
+      <a [routerLink]="['/product', item.productId]" class="cart-item__name-link" [attr.aria-label]="'common.product.view_details' | translate: { name: (item.productId | productTranslate:item.name) }">
+        <h3 class="cart-item__name">{{ item.productId | productTranslate:item.name }}</h3>
+      </a>
+      <button
+        type="button"
+        (click)="onRemoveClick()"
+        class="cart-item__remove-icon"
+        [attr.aria-label]="'common.product.remove' | translate"
+        [title]="'common.product.remove' | translate">
+        <app-icon name="trash" className="h-5 w-5"></app-icon>
+      </button>
+    </div>
+    @if (getUnitLabel()) {
+      <div class="cart-item__variant">
+        <span class="cart-item__unit">{{ getUnitLabel() }}</span>
+      </div>
+    }
+    <div class="cart-item__footer">
+      <div class="cart-item__price-block">
+        @if (isOffer) {
+          <ins class="cart-item__new-price">{{ getFormattedPrice(item.unitPrice) }}</ins>
+          <del class="cart-item__old-price">{{ getOldPriceDisplay() }}</del>
+        } @else {
+          <span class="cart-item__price">{{ getFormattedPrice(item.unitPrice) }}</span>
+        }
+      </div>
+      <app-quantity-controls
+        [quantity]="item.quantity"
+        [ariaLabels]="{
+          decrease: 'common.cart.decrease_qty' | translate,
+          increase: 'common.cart.increase_qty' | translate
+        }"
+        (decrease)="onDecrease()"
+        (increase)="onIncrease()">
+      </app-quantity-controls>
+    </div>
+  </div>
+</div>

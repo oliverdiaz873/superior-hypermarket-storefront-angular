@@ -105,11 +105,12 @@ Self-contained business modules, organized by domain. Each feature follows an in
 features/
 |-- cart/           # Shopping cart (service, components, types)
 |-- category/       # Category page
-|-- contact/        # Contact form page
+|-- contact/        # Contact form page with Help banner + prefill
+|-- help/           # Help Center (help.content.ts, guards, 3 pages, HelpLayout, ResolutionBlock)
 |-- home/           # Home page (hero carousel, banners, about)
-|-- layout/         # Header, Footer, LegalLayout components
+|-- layout/         # Header (no Contact), Footer (Help 2 + Cuenta 3 + Legal)
 |-- legal/          # Terms and Privacy pages
-|-- navigation/     # Desktop/tablet/mobile navigation
+|-- navigation/     # Desktop/tablet/mobile navigation (no Contact)
 |-- not-found/      # 404 catch-all page
 |-- offers/         # Offers page (data, filters, components)
 |-- product/        # Product detail page

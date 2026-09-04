@@ -1,1184 +1,1358 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.hipermercadosuperior.com/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/offers</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/offers</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/contact</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/contact</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/legal/terms</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/legal/terms</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/legal/privacy</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/legal/privacy</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/category/alimentos</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/help</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/category/electrodomesticos</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/help/orders</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/returns</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/account</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/payments</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/products</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/stores</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/other</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/orders/track</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/orders/cancel</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/orders/address</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/orders/late-delivery</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/returns/policy</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/returns/damaged</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/returns/refund</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/account/create</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/account/login</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/account/data</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/account/logout</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/payments/methods</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/payments/pending</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/payments/invoice</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/products/availability</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/products/offers</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/products/search</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/stores/contact</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/stores/pickup</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/other/privacy</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/help/other/other</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/category/alimentos</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/category/tecnologia</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/category/electrodomesticos</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/category/ropa</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/category/tecnologia</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/category/muebles-y-decoracion</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/category/ropa</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/category/farmacia</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/category/muebles-y-decoracion</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/category/ferreteria</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/category/farmacia</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/category/juguetes</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/category/ferreteria</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/coca_cola</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/category/juguetes</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hipermercadosuperior.com/product/coca_cola</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/coca_cola_zero</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/coca_cola_zero</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/country_club_frambuesa</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/country_club_frambuesa</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/country_club_uva</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/country_club_uva</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/gatorade_uva</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/gatorade_uva</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/jugo_de_naranja_rica</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/jugo_de_naranja_rica</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/jugo_de_pera_santal</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/jugo_de_pera_santal</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/red_bull</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/red_bull</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/camarones_crudos</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/camarones_crudos</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/camarones_precocidos</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/camarones_precocidos</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/carne_de_res_para_hamburguesas</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/carne_de_res_para_hamburguesas</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/chuleta_de_cerdo</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/chuleta_de_cerdo</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pollo_entero_don_pollo</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pollo_entero_don_pollo</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/tilapia_roja</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/tilapia_roja</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/aceite_crisol</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/aceite_crisol</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/aceite_oliva_extra_virgen</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/aceite_oliva_extra_virgen</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/mayonesa_baldom</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/mayonesa_baldom</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/sal_refisal</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/sal_refisal</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/sazon_completo_maggi</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/sazon_completo_maggi</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/sopita_dona_gallina</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/sopita_dona_gallina</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/vinagre_baldom</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/vinagre_baldom</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/atun_dimar</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/atun_dimar</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/gandules_verdes_goya</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/gandules_verdes_goya</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/habichuelas_negras_goya</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/habichuelas_negras_goya</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/maiz_la_famosa</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/maiz_la_famosa</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/salchichas_jaja</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/salchichas_jaja</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/sardinas_gord</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/sardinas_gord</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/tomates_pelados_la_famosa</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/tomates_pelados_la_famosa</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/ajies_morrones</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/ajies_morrones</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/cebollas_rojas</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/cebollas_rojas</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/fresas</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/fresas</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/limones_persa</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/limones_persa</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/mandarinas</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/mandarinas</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/manzanas_amarillas</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/manzanas_amarillas</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/manzanas_rojas</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/manzanas_rojas</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/manzanas_verdes</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/manzanas_verdes</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pepinos</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pepinos</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/tomates_de_ensalada</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/tomates_de_ensalada</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/uvas_moradas</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/uvas_moradas</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/zanahorias</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/zanahorias</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/huevos_don_pancho</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/huevos_don_pancho</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/leche_entera_rica</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/leche_entera_rica</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/queso_gorgonzola</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/queso_gorgonzola</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/queso_gouda</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/queso_gouda</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/yogurt_fresa_yoka</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/yogurt_fresa_yoka</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/yogurt_natural_rica</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/yogurt_natural_rica</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/aire-acondicionado_tecnomaster</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/aire-acondicionado_tecnomaster</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/aire-acondicionado_whirlpool</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/aire-acondicionado_whirlpool</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/ventilador_daiwa</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/ventilador_daiwa</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/ventilador_kdk</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/ventilador_kdk</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/ventilador_pequeno</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/ventilador_pequeno</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/ventilador_de_techo_kdk</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/ventilador_de_techo_kdk</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/bebedero_tecnomaster</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/bebedero_tecnomaster</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/cilindro_de_gas_duragas</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/cilindro_de_gas_duragas</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/estufa_lg</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/estufa_lg</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/extractor-de-grasa_drija</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/extractor-de-grasa_drija</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/freezer_7_pies</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/freezer_7_pies</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/nevera_lg</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/nevera_lg</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/lavadora_dimensions</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/lavadora_dimensions</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/lavadora_frigidaire</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/lavadora_frigidaire</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/lavadora_lg</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/lavadora_lg</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/lavadora-y-secadora_lg</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/lavadora-y-secadora_lg</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/lavadora-y-secadora_tecnomaster</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/lavadora-y-secadora_tecnomaster</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/equate_analgesico</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/equate_analgesico</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/flanax</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/flanax</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/thera_gesic</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/thera_gesic</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/tylenol</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/tylenol</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/vaporizing</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/vaporizing</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/antiflu_des</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/antiflu_des</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/coldyflu</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/coldyflu</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/mucinex</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/mucinex</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/nyquil</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/nyquil</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/theraflu</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/theraflu</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/acido_hialuronico</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/acido_hialuronico</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/hidratante_cerave</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/hidratante_cerave</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/hidratante_eucerin</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/hidratante_eucerin</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/hidratante_grande</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/hidratante_grande</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/retinol</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/retinol</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/serum_vitaminac</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/serum_vitaminac</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/flintstones</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/flintstones</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/multivitaminico</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/multivitaminico</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/omega3</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/omega3</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/vitafusion</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/vitafusion</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/vitaminac</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/vitaminac</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/bombillas_led</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/bombillas_led</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/bombillas</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/bombillas</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/extension</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/extension</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/linterna</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/linterna</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/toma_corriente</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/toma_corriente</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/destornillador</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/destornillador</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/llave_de_tuerca</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/llave_de_tuerca</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/martillo</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/martillo</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pinza</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pinza</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/sierra_de_mano</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/sierra_de_mano</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/brocha</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/brocha</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/kit_de_pintura</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/kit_de_pintura</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pinturas_tropical</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pinturas_tropical</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pinturas_tucan</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pinturas_tucan</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/rodillo_de_pintura</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/rodillo_de_pintura</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/grifo_moderno</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/grifo_moderno</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/grifo</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/grifo</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/manguera_de_jardin</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/manguera_de_jardin</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/manguera</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/manguera</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/tubo</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/tubo</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/muneca_baby_doll</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/muneca_baby_doll</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/muneca_barbie</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/muneca_barbie</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/juguetes_de_peluqueria</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/juguetes_de_peluqueria</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/kit_de_maquillaje</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/kit_de_maquillaje</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pinta_unas</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pinta_unas</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/auto_azul</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/auto_azul</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/avion_de_juguete</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/avion_de_juguete</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/autos_hot_wheels</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/autos_hot_wheels</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/legos_de_creeper</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/legos_de_creeper</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/legos_de_minecraft</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/legos_de_minecraft</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/florero_de_plantas</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/florero_de_plantas</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/florero_de_vidrio</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/florero_de_vidrio</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/jarron</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/jarron</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/jarrones</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/jarrones</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/tulipanes</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/tulipanes</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/mesa_de_madera</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/mesa_de_madera</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/mesa_de_noche</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/mesa_de_noche</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/mesa_moderna</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/mesa_moderna</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/mesa_oscura</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/mesa_oscura</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/mesa_pequena</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/mesa_pequena</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/sillon_amarillo</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/sillon_amarillo</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/sillon_azul</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/sillon_azul</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/sillon_blanco</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/sillon_blanco</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/sillon_gris</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/sillon_gris</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/sillon_verde</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/sillon_verde</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/sofa_cama_blanco</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/sofa_cama_blanco</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/sofa_gris</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/sofa_gris</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/sofa_media_luna</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/sofa_media_luna</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/sofa_negro</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/sofa_negro</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/sofa_verde</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/sofa_verde</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pantalon_negro</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pantalon_negro</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pantalones_de_golf</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pantalones_de_golf</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pantalones_deportivos_joggers</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pantalones_deportivos_joggers</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pantalones_jeans</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pantalones_jeans</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pantalones_joggers</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pantalones_joggers</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/leggings_de_licra</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/leggings_de_licra</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pantalon_acampanado</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pantalon_acampanado</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pantalon_casual</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pantalon_casual</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pantalon_jean</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pantalon_jean</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pantalon_liso_mujer</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pantalon_liso_mujer</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/jean_para_ninos</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/jean_para_ninos</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/licra_para_ninos</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/licra_para_ninos</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pantalon_deportivo</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pantalon_deportivo</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pantalon_liso</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pantalon_liso</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/pantalones_lisos_para_ninos</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/pantalones_lisos_para_ninos</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/traje_2_piezas</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/traje_2_piezas</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/traje_azul</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/traje_azul</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/traje_completo</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/traje_completo</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/traje_elegante</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/traje_elegante</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/traje_negro</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/traje_negro</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/vestido_ajustado</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/vestido_ajustado</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/vestido_cuello_cuadrado</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/vestido_cuello_cuadrado</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/vestido_de_invierno</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/vestido_de_invierno</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/vestido_elegante</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/vestido_elegante</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/vestido_negro</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/vestido_negro</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/bocina_aiwa</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/bocina_aiwa</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/bocina_lg</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/bocina_lg</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/bocina_samsung</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/bocina_samsung</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/bocina_stage</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/bocina_stage</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/bocina_tecnomaster</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/bocina_tecnomaster</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/celular_samsung_a26</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/celular_samsung_a26</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/celular_samsung_a35</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/celular_samsung_a35</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/celular_s24_ultra</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/celular_s24_ultra</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/iphone_14</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/iphone_14</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/iphone_14_pro</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/iphone_14_pro</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/laptop_asus</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/laptop_asus</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/laptop_dell</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/laptop_dell</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/laptop_dragonx</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/laptop_dragonx</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/laptop_hp</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/laptop_hp</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/laptop_lenovo</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/laptop_lenovo</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/tablet_apple</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/tablet_apple</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/tablet_rted</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/tablet_rted</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/tablet_samsung</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/tablet_samsung</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/tablet_tcl</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/tablet_tcl</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/tablet_tecnomaster</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/tablet_tecnomaster</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/televisor_led_50</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/televisor_led_50</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/televisor_led_lg</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/televisor_led_lg</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/televisor_led_samsung</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/televisor_led_samsung</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/televisor_led_tecnomaster</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/televisor_led_tecnomaster</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.hipermercadosuperior.com/product/televisor_samsung_75_pulgadas</loc>
-    <lastmod>2026-08-19</lastmod>
+    <loc>https://hipermercadosuperior.com/product/televisor_samsung_75_pulgadas</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
