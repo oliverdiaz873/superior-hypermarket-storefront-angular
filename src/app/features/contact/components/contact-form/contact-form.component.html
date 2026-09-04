@@ -1,6 +1,34 @@
 <form [formGroup]="form" (ngSubmit)="submit()" class="contacto-form" novalidate>
   <h1>{{ 'contact.form.title' | translate }}</h1>
 
+  @if (isHelpContext) {
+    <div class="help-chips" style="margin-bottom:16px">
+      <span class="help-chip">{{ categoryName }} › {{ topicName }}</span>
+      @if (selectedOrderId || genericOrderId) {
+        <span class="help-chip help-chip-order">Pedido: {{ orderDisplay }}</span>
+      }
+    </div>
+  }
+
+  @if (isHelpContext && orders.length > 0) {
+    <div class="input-box mb-5 md:mb-6">
+      <label for="help_order">{{ 'help.contact_context.order_selector_label' | translate }}</label>
+      <select id="help_order" [(ngModel)]="selectedOrderId" [ngModelOptions]="{standalone: true}" class="help-order-select">
+        <option value="">{{ 'help.contact_context.order_selector_hint' | translate }}</option>
+        @for (o of orders; track o.id) {
+          <option [value]="o.id">#{{ o.orderNumber }} — {{ o.status }} — {{ o.createdAt | date:'mediumDate' }}</option>
+        }
+      </select>
+      <div class="text-white/60 text-xs mt-1 ml-2">{{ 'help.contact_context.order_selector_hint' | translate }}</div>
+    </div>
+  } @else if (isHelpContext) {
+    <div class="input-box mb-5 md:mb-6">
+      <label for="help_order_generic">{{ 'help.contact_context.order_generic_label' | translate }}</label>
+      <input id="help_order_generic" [(ngModel)]="genericOrderId" [ngModelOptions]="{standalone: true}" [placeholder]="'help.contact_context.order_generic_placeholder' | translate" class="w-full" />
+      <div class="text-white/60 text-xs mt-1 ml-2">{{ 'help.contact_context.order_generic_hint' | translate }}</div>
+    </div>
+  }
+
   <div class="input-box mb-5 md:mb-6">
     <label for="nombre">{{ 'contact.form.labels.name' | translate }}</label>
     <input
@@ -57,7 +85,7 @@
       id="mensaje"
       formControlName="mensaje"
       rows="6"
-      [placeholder]="'contact.form.placeholders.message' | translate"
+      [placeholder]="messagePlaceholder"
       [ngClass]="{ 'invalid-value': form.get('mensaje')?.touched && form.get('mensaje')?.invalid }"
       required
     ></textarea>

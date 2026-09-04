@@ -20,16 +20,16 @@
  */
 import { HttpErrorResponse } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, inject, Input, OnChanges, OnInit, output } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { NgClass } from '@angular/common';
+import { DatePipe, NgClass } from '@angular/common';
 import { ApiService } from '@core/api/api.service';
 import { ContactFormService } from '../../services/contact-form.service';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [ReactiveFormsModule, TranslatePipe, NgClass],
+  imports: [ReactiveFormsModule, FormsModule, TranslatePipe, NgClass, DatePipe],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -42,18 +42,30 @@ export class ContactFormComponent implements OnInit, OnChanges {
 
   @Input() initialName?: string;
   @Input() initialEmail?: string;
+  @Input() helpCategory?: string;
+  @Input() helpTopic?: string;
+  @Input() initialOrderId?: string;
+  @Input() orders: import('@features/orders/types/order.interface').Order[] = [];
 
   readonly success = output<void>();
 
   isSubmitting = false;
   submitError = '';
+  selectedOrderId = '';
+  genericOrderId = '';
 
   ngOnInit(): void {
     this.applyInitialValues();
+    this.selectedOrderId = this.initialOrderId ?? '';
+    this.genericOrderId = this.initialOrderId ?? '';
   }
 
   ngOnChanges(): void {
     this.applyInitialValues();
+    if (this.initialOrderId !== undefined) {
+      this.selectedOrderId = this.initialOrderId ?? '';
+      this.genericOrderId = this.initialOrderId ?? '';
+    }
   }
 
   private applyInitialValues(): void {
@@ -63,6 +75,41 @@ export class ContactFormComponent implements OnInit, OnChanges {
     if (this.initialEmail && !this.form.get('email')?.value && !this.form.get('email')?.dirty) {
       this.form.get('email')?.setValue(this.initialEmail);
     }
+  }
+
+  get isHelpContext(): boolean {
+    return !!this.helpCategory && !!this.helpTopic;
+  }
+
+  get categoryName(): string {
+    if (!this.helpCategory) return '';
+    try { return this.translate.instant(`help.categories.${this.helpCategory}`); } catch { return this.helpCategory; }
+  }
+
+  get topicName(): string {
+    if (!this.helpCategory || !this.helpTopic) return '';
+    try { return this.translate.instant(`help.topics.${this.helpCategory}.${this.helpTopic}.title`); } catch { return this.helpTopic; }
+  }
+
+  get selectedOrder(): import('@features/orders/types/order.interface').Order | undefined {
+    return this.orders.find(o => o.id === this.selectedOrderId);
+  }
+
+  get orderDisplay(): string {
+    if (this.selectedOrder) return `#${this.selectedOrder.orderNumber}`;
+    if (this.selectedOrderId) return `#${this.selectedOrderId}`;
+    if (this.genericOrderId) return `#${this.genericOrderId.trim()}`;
+    return '';
+  }
+
+  get messagePlaceholder(): string {
+    if (this.isHelpContext) {
+      if (this.selectedOrderId && this.orderDisplay) {
+        return this.translate.instant('help.contact_context.message_placeholder_with_order', { orderNumber: this.orderDisplay });
+      }
+      return this.translate.instant('help.contact_context.message_placeholder_topic', { topic: this.topicName || this.helpTopic });
+    }
+    return this.translate.instant('contact.form.placeholders.message');
   }
 
   readonly form = this.fb.nonNullable.group({
@@ -86,11 +133,23 @@ export class ContactFormComponent implements OnInit, OnChanges {
     this.submitError = '';
     this.isSubmitting = true;
 
+    let prefix = '';
+    if (this.helpCategory && this.helpTopic) {
+      prefix = `[${this.helpCategory}/${this.helpTopic}]`;
+      const orderIdToUse = this.orders.length > 0 ? this.selectedOrderId : this.genericOrderId.trim();
+      if (orderIdToUse) {
+        prefix += `[pedido:${orderIdToUse}] `;
+      } else {
+        prefix += ' ';
+      }
+    }
+    const messageToSend = prefix + mensaje.trim();
+
     this.api.sendContactMessage({
       name: nombre.trim(),
       email: email.trim(),
       phone: telefono?.trim() || undefined,
-      message: mensaje.trim()
+      message: messageToSend
     }).subscribe({
       next: () => {
         this.isSubmitting = false;
