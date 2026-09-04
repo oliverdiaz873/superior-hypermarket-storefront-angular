@@ -3,7 +3,10 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { SeoService } from '@core/services/seo.service';
 import { HelpLayoutComponent } from '../../components/help-layout/help-layout.component';
-import { BreadcrumbComponent, BreadcrumbItem } from '@shared/components/breadcrumb/breadcrumb.component';
+import {
+  BreadcrumbComponent,
+  BreadcrumbItem,
+} from '@shared/components/breadcrumb/breadcrumb.component';
 import { HELP_CATEGORIES, isValidHelpCategory } from '../../help.content';
 
 @Component({
@@ -37,11 +40,18 @@ import { HELP_CATEGORIES, isValidHelpCategory } from '../../help.content';
 
         <div class="help-contact-cta">
           <p>{{ 'help.resolution.contact_hint' | translate }}</p>
-          <a [routerLink]="['/contact']" [queryParams]="{category: categoryId}" class="help-pill">{{ 'help.actions.contact' | translate }}</a>
+          <a
+            [routerLink]="['/contact']"
+            [queryParams]="{ category: categoryId }"
+            class="help-pill"
+            >{{ 'help.actions.contact' | translate }}</a
+          >
         </div>
 
         <div style="margin-top:16px; text-align:center">
-          <a routerLink="/help" class="help-pill help-pill-secondary">{{ 'help.actions.back_to_help' | translate }}</a>
+          <a routerLink="/help" class="help-pill help-pill-secondary">{{
+            'help.actions.back_to_help' | translate
+          }}</a>
         </div>
       </app-help-layout>
     }
@@ -61,7 +71,7 @@ export class HelpCategoryPageComponent implements OnInit {
   protected isNotFound = false;
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
+    this.route.paramMap.subscribe((params) => {
       const cat = params.get('category') ?? '';
       this.categoryId = cat;
       if (!isValidHelpCategory(cat)) {
@@ -76,7 +86,7 @@ export class HelpCategoryPageComponent implements OnInit {
         return;
       }
       this.isNotFound = false;
-      const catData = HELP_CATEGORIES.find(c => c.id === cat);
+      const catData = HELP_CATEGORIES.find((c) => c.id === cat);
       this.topics = catData ? [...catData.topics] : [];
       this.categoryName = this.translate.instant(`help.categories.${cat}`);
       this.categoryDescription = this.translate.instant(`help.category_descriptions.${cat}`);
@@ -87,7 +97,9 @@ export class HelpCategoryPageComponent implements OnInit {
     this.translate.onLangChange.subscribe(() => {
       if (!this.isNotFound && this.categoryId) {
         this.categoryName = this.translate.instant(`help.categories.${this.categoryId}`);
-        this.categoryDescription = this.translate.instant(`help.category_descriptions.${this.categoryId}`);
+        this.categoryDescription = this.translate.instant(
+          `help.category_descriptions.${this.categoryId}`,
+        );
         this.applySeo();
         this.updateBreadcrumb();
       }
@@ -98,7 +110,9 @@ export class HelpCategoryPageComponent implements OnInit {
     const catName = this.translate.instant(`help.categories.${this.categoryId}`);
     this.seo.applySeo({
       title: this.translate.instant('help.seo.category.title_template', { category: catName }),
-      description: this.translate.instant('help.seo.category.description_template', { category: catName }),
+      description: this.translate.instant('help.seo.category.description_template', {
+        category: catName,
+      }),
       canonicalPath: `/help/${this.categoryId}`,
     });
   }

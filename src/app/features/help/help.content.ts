@@ -18,42 +18,23 @@ export const HELP_CATEGORIES = [
   },
   {
     id: 'account',
-    topics: [
-      { id: 'create' },
-      { id: 'login' },
-      { id: 'data' },
-      { id: 'logout' },
-    ],
+    topics: [{ id: 'create' }, { id: 'login' }, { id: 'data' }, { id: 'logout' }],
   },
   {
     id: 'payments',
-    topics: [
-      { id: 'methods' },
-      { id: 'pending', orderContext: true },
-      { id: 'invoice' },
-    ],
+    topics: [{ id: 'methods' }, { id: 'pending', orderContext: true }, { id: 'invoice' }],
   },
   {
     id: 'products',
-    topics: [
-      { id: 'availability' },
-      { id: 'offers' },
-      { id: 'search' },
-    ],
+    topics: [{ id: 'availability' }, { id: 'offers' }, { id: 'search' }],
   },
   {
     id: 'stores',
-    topics: [
-      { id: 'contact' },
-      { id: 'pickup' },
-    ],
+    topics: [{ id: 'contact' }, { id: 'pickup' }],
   },
   {
     id: 'other',
-    topics: [
-      { id: 'privacy' },
-      { id: 'other' },
-    ],
+    topics: [{ id: 'privacy' }, { id: 'other' }],
   },
 ] as const;
 

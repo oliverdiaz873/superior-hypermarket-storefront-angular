@@ -88,7 +88,8 @@ describe('normalizeStructuredUnit', () => {
   describe('sin unidad → hasUnit=false', () => {
     it('objeto vacío', () => expect(normalizeStructuredUnit({}).hasUnit).toBe(false));
     it('unidad=""', () => expect(normalizeStructuredUnit({ unidad: '' }).hasUnit).toBe(false));
-    it('unidad="   "', () => expect(normalizeStructuredUnit({ unidad: '   ' }).hasUnit).toBe(false));
+    it('unidad="   "', () =>
+      expect(normalizeStructuredUnit({ unidad: '   ' }).hasUnit).toBe(false));
     it('unidad=undefined', () =>
       expect(normalizeStructuredUnit({ unidad: undefined }).hasUnit).toBe(false));
   });
@@ -109,7 +110,10 @@ describe('normalizeStructuredUnit', () => {
       expect(r.quantity).toBe(1);
     });
     it('unidad definida quantity=null → hasUnit=true, quantity=1', () => {
-      const r = normalizeStructuredUnit({ unidad: 'unidad', quantity: null as unknown as undefined });
+      const r = normalizeStructuredUnit({
+        unidad: 'unidad',
+        quantity: null as unknown as undefined,
+      });
       expect(r.hasUnit).toBe(true);
       expect(r.quantity).toBe(1);
     });
@@ -192,32 +196,27 @@ describe('formatUnitLabel ES', () => {
     expect(formatUnitLabel({ unidad: 'lata', quantity: 6 }, es)).toBe('6 latas'));
 
   // No contables
-  it('kg 1 → kg', () =>
-    expect(formatUnitLabel({ unidad: 'kg', quantity: 1 }, es)).toBe('kg'));
-  it('kg 2 → 2 kg', () =>
-    expect(formatUnitLabel({ unidad: 'kg', quantity: 2 }, es)).toBe('2 kg'));
+  it('kg 1 → kg', () => expect(formatUnitLabel({ unidad: 'kg', quantity: 1 }, es)).toBe('kg'));
+  it('kg 2 → 2 kg', () => expect(formatUnitLabel({ unidad: 'kg', quantity: 2 }, es)).toBe('2 kg'));
   it('kg 0.5 → 0.5 kg', () =>
     expect(formatUnitLabel({ unidad: 'kg', quantity: 0.5 }, es)).toBe('0.5 kg'));
   it('g 500 → 500 g', () =>
     expect(formatUnitLabel({ unidad: 'g', quantity: 500 }, es)).toBe('500 g'));
   it('ml 250 → 250 ml', () =>
     expect(formatUnitLabel({ unidad: 'ml', quantity: 250 }, es)).toBe('250 ml'));
-  it('lb 3 → 3 lb', () =>
-    expect(formatUnitLabel({ unidad: 'lb', quantity: 3 }, es)).toBe('3 lb'));
+  it('lb 3 → 3 lb', () => expect(formatUnitLabel({ unidad: 'lb', quantity: 3 }, es)).toBe('3 lb'));
   it('oz 16 → 16 oz', () =>
     expect(formatUnitLabel({ unidad: 'oz', quantity: 16 }, es)).toBe('16 oz'));
 
   // Unificación l → litro
-  it('l 1 → litro', () =>
-    expect(formatUnitLabel({ unidad: 'l', quantity: 1 }, es)).toBe('litro'));
+  it('l 1 → litro', () => expect(formatUnitLabel({ unidad: 'l', quantity: 1 }, es)).toBe('litro'));
   it('l 2 → 2 litros', () =>
     expect(formatUnitLabel({ unidad: 'l', quantity: 2 }, es)).toBe('2 litros'));
 
   // Default quantity default 1 cuando falta
   it('unidad sin quantity → unidad (no vacío)', () =>
     expect(formatUnitLabel({ unidad: 'unidad' }, es)).toBe('unidad'));
-  it('kg sin quantity → kg', () =>
-    expect(formatUnitLabel({ unidad: 'kg' }, es)).toBe('kg'));
+  it('kg sin quantity → kg', () => expect(formatUnitLabel({ unidad: 'kg' }, es)).toBe('kg'));
 });
 
 // =========================================================================
@@ -256,31 +255,37 @@ describe('formatProductPrice ES', () => {
   const es = buildTranslatorEs();
 
   it('100 + unidad + 1 → Precio: $100 / unidad', () => {
-    expect(formatProductPrice(inputLike({ unidad: 'unidad', quantity: 1 }), es))
-      .toBe('Precio: $100 / unidad');
+    expect(formatProductPrice(inputLike({ unidad: 'unidad', quantity: 1 }), es)).toBe(
+      'Precio: $100 / unidad',
+    );
   });
   it('100 + unidad + 2 → Precio: $100 / 2 unidades', () => {
-    expect(formatProductPrice(inputLike({ unidad: 'unidad', quantity: 2 }), es))
-      .toBe('Precio: $100 / 2 unidades');
+    expect(formatProductPrice(inputLike({ unidad: 'unidad', quantity: 2 }), es)).toBe(
+      'Precio: $100 / 2 unidades',
+    );
   });
   it('100 + kg + 0.5 → Precio: $100 / 0.5 kg', () => {
-    expect(formatProductPrice(inputLike({ unidad: 'kg', quantity: 0.5 }), es))
-      .toBe('Precio: $100 / 0.5 kg');
+    expect(formatProductPrice(inputLike({ unidad: 'kg', quantity: 0.5 }), es)).toBe(
+      'Precio: $100 / 0.5 kg',
+    );
   });
   it('100 + kg + 2 → Precio: $100 / 2 kg', () => {
-    expect(formatProductPrice(inputLike({ unidad: 'kg', quantity: 2 }), es))
-      .toBe('Precio: $100 / 2 kg');
+    expect(formatProductPrice(inputLike({ unidad: 'kg', quantity: 2 }), es)).toBe(
+      'Precio: $100 / 2 kg',
+    );
   });
   it('100 + g + 500 → Precio: $100 / 500 g', () => {
-    expect(formatProductPrice(inputLike({ unidad: 'g', quantity: 500 }), es))
-      .toBe('Precio: $100 / 500 g');
+    expect(formatProductPrice(inputLike({ unidad: 'g', quantity: 500 }), es)).toBe(
+      'Precio: $100 / 500 g',
+    );
   });
   it('100 sin unidad → Precio: $100', () => {
     expect(formatProductPrice(inputLike({}), es)).toBe('Precio: $100');
   });
   it('100 + litro + 2 → Precio: $100 / 2 litros', () => {
-    expect(formatProductPrice(inputLike({ unidad: 'litro', quantity: 2 }), es))
-      .toBe('Precio: $100 / 2 litros');
+    expect(formatProductPrice(inputLike({ unidad: 'litro', quantity: 2 }), es)).toBe(
+      'Precio: $100 / 2 litros',
+    );
   });
 });
 
@@ -315,11 +320,9 @@ describe('formatProductPrice — regresiones críticas', () => {
 describe('formatProductPrice — pricePrefix EN', () => {
   const en = buildTranslatorEn();
   it('prefijo "Price: " produce Price: $100 / 2 units', () => {
-    const r = formatProductPrice(
-      inputLike({ unidad: 'unidad', quantity: 2 }),
-      en,
-      { pricePrefix: 'Price: ' }
-    );
+    const r = formatProductPrice(inputLike({ unidad: 'unidad', quantity: 2 }), en, {
+      pricePrefix: 'Price: ',
+    });
     expect(r).toBe('Price: $100 / 2 units');
   });
 });
@@ -332,27 +335,27 @@ describe('formatPricePerUnit ES', () => {
 
   it('90 + unidad + 1 → "$90 / unidad"', () => {
     expect(formatPricePerUnit(inputLike({ precio: 90, unidad: 'unidad', quantity: 1 }), es)).toBe(
-      '$90 / unidad'
+      '$90 / unidad',
     );
   });
   it('90 + unidad + 2 → "$90 / 2 unidades"', () => {
     expect(formatPricePerUnit(inputLike({ precio: 90, unidad: 'unidad', quantity: 2 }), es)).toBe(
-      '$90 / 2 unidades'
+      '$90 / 2 unidades',
     );
   });
   it('80 + litro + 2 → "$80 / 2 litros"', () => {
     expect(formatPricePerUnit(inputLike({ precio: 80, unidad: 'litro', quantity: 2 }), es)).toBe(
-      '$80 / 2 litros'
+      '$80 / 2 litros',
     );
   });
   it('250 + kg + 2 → "$250 / 2 kg"', () => {
     expect(formatPricePerUnit(inputLike({ precio: 250, unidad: 'kg', quantity: 2 }), es)).toBe(
-      '$250 / 2 kg'
+      '$250 / 2 kg',
     );
   });
   it('15 + kg + 0.5 → "$15 / 0.5 kg"', () => {
     expect(formatPricePerUnit(inputLike({ precio: 15, unidad: 'kg', quantity: 0.5 }), es)).toBe(
-      '$15 / 0.5 kg'
+      '$15 / 0.5 kg',
     );
   });
   it('90 + sin unidad → "" (oculta segunda línea)', () => {
@@ -363,21 +366,23 @@ describe('formatPricePerUnit ES', () => {
   });
   it('precio con miles 33500.5 + kg → "$33,500.5 / kg"', () => {
     expect(formatPricePerUnit(inputLike({ precio: 33500.5, unidad: 'kg', quantity: 1 }), es)).toBe(
-      '$33,500.5 / kg'
+      '$33,500.5 / kg',
     );
   });
   it('precio con miles entero 1000 + unidad 1 → "$1,000 / unidad"', () => {
     expect(formatPricePerUnit(inputLike({ precio: 1000, unidad: 'unidad', quantity: 1 }), es)).toBe(
-      '$1,000 / unidad'
+      '$1,000 / unidad',
     );
   });
   it('oferta: precio actual 80 + litro 2 → "$80 / 2 litros" (no oldPrice)', () => {
     expect(formatPricePerUnit(inputLike({ precio: 80, unidad: 'litro', quantity: 2 }), es)).toBe(
-      '$80 / 2 litros'
+      '$80 / 2 litros',
     );
   });
   it('unidad sin quantity → "$90 / unidad" (quantity default 1)', () => {
-    expect(formatPricePerUnit(inputLike({ precio: 90, unidad: 'unidad' }), es)).toBe('$90 / unidad');
+    expect(formatPricePerUnit(inputLike({ precio: 90, unidad: 'unidad' }), es)).toBe(
+      '$90 / unidad',
+    );
   });
   it('kg sin quantity → "$90 / kg"', () => {
     expect(formatPricePerUnit(inputLike({ precio: 90, unidad: 'kg' }), es)).toBe('$90 / kg');
@@ -397,12 +402,12 @@ describe('formatPricePerUnit EN', () => {
   const en = buildTranslatorEn();
   it('90 + unidad + 2 → "$90 / 2 units"', () => {
     expect(formatPricePerUnit(inputLike({ precio: 90, unidad: 'unidad', quantity: 2 }), en)).toBe(
-      '$90 / 2 units'
+      '$90 / 2 units',
     );
   });
   it('80 + litro + 2 → "$80 / 2 liters"', () => {
     expect(formatPricePerUnit(inputLike({ precio: 80, unidad: 'litro', quantity: 2 }), en)).toBe(
-      '$80 / 2 liters'
+      '$80 / 2 liters',
     );
   });
 });

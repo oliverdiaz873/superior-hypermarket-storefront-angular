@@ -3,14 +3,23 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { SeoService } from '@core/services/seo.service';
 import { HelpLayoutComponent } from '../../components/help-layout/help-layout.component';
-import { BreadcrumbComponent, BreadcrumbItem } from '@shared/components/breadcrumb/breadcrumb.component';
+import {
+  BreadcrumbComponent,
+  BreadcrumbItem,
+} from '@shared/components/breadcrumb/breadcrumb.component';
 import { ResolutionBlockComponent } from '../../components/resolution-block/resolution-block.component';
 import { isValidHelpTopic } from '../../help.content';
 
 @Component({
   selector: 'app-help-topic-page',
   standalone: true,
-  imports: [RouterLink, TranslatePipe, HelpLayoutComponent, BreadcrumbComponent, ResolutionBlockComponent],
+  imports: [
+    RouterLink,
+    TranslatePipe,
+    HelpLayoutComponent,
+    BreadcrumbComponent,
+    ResolutionBlockComponent,
+  ],
   template: `
     @if (isNotFound) {
       <div class="help-container">
@@ -42,18 +51,39 @@ import { isValidHelpTopic } from '../../help.content';
           <div class="help-contact-cta">
             <p>{{ 'help.resolution.contact_hint' | translate }}</p>
             <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap">
-              <a [routerLink]="['/contact']" [queryParams]="orderId ? {category: categoryId, topic: topicId, orderId: orderId} : {category: categoryId, topic: topicId}" class="help-pill">{{ 'help.actions.contact' | translate }}</a>
+              <a
+                [routerLink]="['/contact']"
+                [queryParams]="
+                  orderId
+                    ? { category: categoryId, topic: topicId, orderId: orderId }
+                    : { category: categoryId, topic: topicId }
+                "
+                class="help-pill"
+                >{{ 'help.actions.contact' | translate }}</a
+              >
               @if (categoryId === 'orders') {
-                <a routerLink="/orders" class="help-pill help-pill-secondary">{{ 'help.actions.view_orders' | translate }}</a>
+                <a routerLink="/orders" class="help-pill help-pill-secondary">{{
+                  'help.actions.view_orders' | translate
+                }}</a>
               }
             </div>
           </div>
 
-          <app-resolution-block [category]="categoryId" [topic]="topicId" [orderId]="orderId"></app-resolution-block>
+          <app-resolution-block
+            [category]="categoryId"
+            [topic]="topicId"
+            [orderId]="orderId"
+          ></app-resolution-block>
 
-          <div style="margin-top:20px; text-align:center; display:flex; gap:12px; justify-content:center; flex-wrap:wrap">
-            <a [routerLink]="['/help', categoryId]" class="help-pill help-pill-secondary">{{ 'help.actions.back_to_category' | translate: {category: categoryName} }}</a>
-            <a routerLink="/help" class="help-pill help-pill-secondary">{{ 'help.actions.back_to_help' | translate }}</a>
+          <div
+            style="margin-top:20px; text-align:center; display:flex; gap:12px; justify-content:center; flex-wrap:wrap"
+          >
+            <a [routerLink]="['/help', categoryId]" class="help-pill help-pill-secondary">{{
+              'help.actions.back_to_category' | translate: { category: categoryName }
+            }}</a>
+            <a routerLink="/help" class="help-pill help-pill-secondary">{{
+              'help.actions.back_to_help' | translate
+            }}</a>
           </div>
         </div>
       </app-help-layout>
@@ -78,10 +108,10 @@ export class HelpTopicPageComponent implements OnInit {
   protected isNotFound = false;
 
   ngOnInit(): void {
-    this.route.queryParamMap.subscribe(q => {
+    this.route.queryParamMap.subscribe((q) => {
       this.orderId = q.get('orderId') ?? undefined;
     });
-    this.route.paramMap.subscribe(params => {
+    this.route.paramMap.subscribe((params) => {
       const cat = params.get('category') ?? '';
       const topic = params.get('topic') ?? '';
       this.categoryId = cat;
@@ -127,10 +157,17 @@ export class HelpTopicPageComponent implements OnInit {
   }
 
   private applySeo(): void {
-    const seo = this.translate.instant(`help.topics.${this.categoryId}.${this.topicId}.seo`) as { title?: string; description?: string } | string;
+    const seo = this.translate.instant(`help.topics.${this.categoryId}.${this.topicId}.seo`) as
+      { title?: string; description?: string } | string;
     // In messages, seo is object with title/description; handle both raw and instant
-    const title = typeof seo === 'object' && seo?.title ? seo.title : this.translate.instant(`help.topics.${this.categoryId}.${this.topicId}.seo.title`);
-    const description = typeof seo === 'object' && seo?.description ? seo.description : this.translate.instant(`help.topics.${this.categoryId}.${this.topicId}.seo.description`);
+    const title =
+      typeof seo === 'object' && seo?.title
+        ? seo.title
+        : this.translate.instant(`help.topics.${this.categoryId}.${this.topicId}.seo.title`);
+    const description =
+      typeof seo === 'object' && seo?.description
+        ? seo.description
+        : this.translate.instant(`help.topics.${this.categoryId}.${this.topicId}.seo.description`);
     this.seo.applySeo({
       title: title || this.title,
       description: description || this.intro,

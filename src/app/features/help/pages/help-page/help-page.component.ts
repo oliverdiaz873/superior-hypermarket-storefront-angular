@@ -4,7 +4,10 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { SeoService } from '@core/services/seo.service';
 import { AuthService } from '@features/auth/services/auth.service';
 import { HelpLayoutComponent } from '../../components/help-layout/help-layout.component';
-import { BreadcrumbComponent, BreadcrumbItem } from '@shared/components/breadcrumb/breadcrumb.component';
+import {
+  BreadcrumbComponent,
+  BreadcrumbItem,
+} from '@shared/components/breadcrumb/breadcrumb.component';
 import { HELP_CATEGORIES } from '../../help.content';
 
 @Component({
@@ -15,14 +18,20 @@ import { HELP_CATEGORIES } from '../../help.content';
     <div class="help-breadcrumb-wrap">
       <app-breadcrumb [items]="breadcrumbItems"></app-breadcrumb>
     </div>
-    <app-help-layout [title]="'help.hero.title' | translate" [subtitle]="'help.hero.subtitle' | translate">
+    <app-help-layout
+      [title]="'help.hero.title' | translate"
+      [subtitle]="'help.hero.subtitle' | translate"
+    >
       @if (authService.status() === 'authenticated') {
         <div class="help-contact-banner">
           <a routerLink="/orders">{{ 'help.actions.view_orders' | translate }} →</a>
         </div>
       } @else {
         <div class="help-contact-banner">
-          <a routerLink="/login" [queryParams]="{returnUrl: '/help'}">{{ 'help.actions.login' | translate }} {{ ('help.category_descriptions.orders' | translate).toLowerCase() }} →</a>
+          <a routerLink="/login" [queryParams]="{ returnUrl: '/help' }"
+            >{{ 'help.actions.login' | translate }}
+            {{ ('help.category_descriptions.orders' | translate).toLowerCase() }} →</a
+          >
         </div>
       }
 

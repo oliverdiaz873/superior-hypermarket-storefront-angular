@@ -2047,13 +2047,7 @@
     "bombillas": {
       "name": "Bombillas Incandescentes",
       "description": "Ilumina tus espacios con nuestras bombillas incandescentes de alta calidad con rendimiento confiable.",
-      "specs": [
-        "Tipo: Incandescente",
-        "Potencia: 60W",
-        "Socket: E27",
-        "Luz cálida",
-        "Económica"
-      ]
+      "specs": ["Tipo: Incandescente", "Potencia: 60W", "Socket: E27", "Luz cálida", "Económica"]
     },
     "bombillas_led": {
       "name": "Bombillas LED",

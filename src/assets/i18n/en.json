@@ -1233,13 +1233,7 @@
     "bombillas": {
       "name": "Incandescent Light Bulbs",
       "description": "Illuminate your spaces with our high-quality incandescent light bulbs featuring reliable performance.",
-      "specs": [
-        "Type: Incandescent",
-        "Power: 60W",
-        "Socket: E27",
-        "Warm light",
-        "Economical"
-      ]
+      "specs": ["Type: Incandescent", "Power: 60W", "Socket: E27", "Warm light", "Economical"]
     },
     "bombillas_led": {
       "name": "LED Light Bulbs",
