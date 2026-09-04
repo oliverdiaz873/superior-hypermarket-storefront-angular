@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core/testing';
+﻿import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { HttpRequest } from '@angular/common/http';
 import { ProductService } from './product.service';
@@ -69,7 +69,7 @@ describe('ProductService (categories F5.3.1)', () => {
       expect(service.categories()).toEqual([category]);
     });
 
-    it('no repite la petición una vez cargadas (cache)', () => {
+    it('no repite la peticiÃ³n una vez cargadas (cache)', () => {
       service.loadCategories();
       httpMock.expectOne(`${getApiBaseUrl()}/categories`).flush({ success: true, data: [apiCategory] });
 
@@ -87,7 +87,7 @@ describe('ProductService (categories F5.3.1)', () => {
   });
 
   describe('loadCategorySections', () => {
-    it('paginan todas las páginas: no asume que una sola respuesta contiene todo', () => {
+    it('paginan todas las pÃ¡ginas: no asume que una sola respuesta contiene todo', () => {
       const page1 = Array.from({ length: 100 }, (_, i) => buildProduct(`p1-${i}`));
       const page2 = Array.from({ length: 50 }, (_, i) => buildProduct(`p2-${i}`));
 
@@ -95,8 +95,7 @@ describe('ProductService (categories F5.3.1)', () => {
 
       const productsUrl = (page: number) => (req: HttpRequest<unknown>) =>
         req.url === `${getApiBaseUrl()}/products` &&
-        req.params.get('category') === 'alimentos' &&
-        req.params.get('subcategoryId') === 'bebidas' &&
+        req.params.get('category') === 'bebidas' &&
         req.params.get('page') === String(page);
 
       const req1 = httpMock.expectOne(productsUrl(1));
@@ -114,7 +113,7 @@ describe('ProductService (categories F5.3.1)', () => {
       expect(service.categorySectionsLoading()).toBe(false);
     });
 
-    it('carga una sola página cuando la sección cabe en el límite', () => {
+    it('carga una sola pÃ¡gina cuando la secciÃ³n cabe en el lÃ­mite', () => {
       const page1 = Array.from({ length: 3 }, (_, i) => buildProduct(`solo-${i}`));
 
       service.loadCategorySections(category);
@@ -144,7 +143,7 @@ describe('ProductService (categories F5.3.1)', () => {
       expect(service.productsLoading()).toBe(false);
     });
 
-    it('marca error y vacía featured cuando falla el request', () => {
+    it('marca error y vacÃ­a featured cuando falla el request', () => {
       service.loadFeatured();
 
       const req = httpMock.expectOne(

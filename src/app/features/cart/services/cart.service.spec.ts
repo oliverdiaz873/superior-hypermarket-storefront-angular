@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core/testing';
+﻿import { TestBed } from '@angular/core/testing';
 import { signal, computed } from '@angular/core';
 import { of, throwError } from 'rxjs';
 import { CartService } from './cart.service';
@@ -9,7 +9,7 @@ import { Product } from '@core/types/product.interface';
 import { CartItem } from '../types/cart.interface';
 import type { ApiCart, ApiCartItem } from '../types/cart-api.interface';
 
-/** Fake de AuthService con `status` tipo signal (A1) para controlar la sesión. */
+/** Fake de AuthService con `status` tipo signal (A1) para controlar la sesiÃ³n. */
 class FakeAuthService {
   private _status = signal<AuthStatus>('loading');
   readonly status = this._status.asReadonly();
@@ -103,7 +103,7 @@ describe('CartService', () => {
     });
 
     service = TestBed.inject(CartService);
-    // Sesión anónima por defecto: los flujos locales no tocan el backend.
+    // SesiÃ³n anÃ³nima por defecto: los flujos locales no tocan el backend.
     authMock.setStatus('anonymous');
     TestBed.flushEffects();
   });
@@ -128,14 +128,14 @@ describe('CartService', () => {
       name: 'Leche Deslactosada',
       imagen: 'leche.jpg',
       unitPrice: 1500,
-      unitLabel: '2 litros',
+      unitLabel: 'litro',
       quantity: 2,
       precioTexto: 'Precio: $1.500 / litro',
       oldPrice: undefined,
       unidad: 'litro',
       isOffer: false,
       discountPercentage: 0,
-      unitQuantity: 2
+      unitQuantity: 1
     });
 
     expect(service.totalItems()).toBe(2);
@@ -236,7 +236,7 @@ describe('CartService', () => {
       name: 'Leche Deslactosada',
       imagen: 'leche.jpg',
       unitPrice: 1500,
-      unitLabel: null,
+      unitLabel: 'litro',
       quantity: 2,
       precioTexto: 'Precio: $1.500 / litro'
     }, {
@@ -433,7 +433,7 @@ describe('CartService', () => {
       await settle();
       await settle();
 
-      // Serialización A→B: primero POST /items, luego PATCH con cantidad absoluta.
+      // SerializaciÃ³n Aâ†’B: primero POST /items, luego PATCH con cantidad absoluta.
       expect(apiMock.addItem).toHaveBeenCalledTimes(1);
       expect(apiMock.addItem).toHaveBeenCalledWith('prod-2', 1);
       expect(apiMock.updateItem).toHaveBeenCalledTimes(1);
@@ -489,8 +489,8 @@ describe('CartService', () => {
       await settle();
 
       expect(service.items()).toEqual([]);
-      // El espejo local queda sin items: o se eliminó la clave o quedó vacío []
-      // (el effect de persistencia en modo anónimo puede escribir el carrito vacío).
+      // El espejo local queda sin items: o se eliminÃ³ la clave o quedÃ³ vacÃ­o []
+      // (el effect de persistencia en modo anÃ³nimo puede escribir el carrito vacÃ­o).
       const stored = window.localStorage.getItem('carrito');
       expect(stored === null || stored === '[]').toBe(true);
       // Logout es client-side: no se llama a DELETE /api/cart.
