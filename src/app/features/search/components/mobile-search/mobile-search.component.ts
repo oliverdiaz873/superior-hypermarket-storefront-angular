@@ -5,7 +5,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { SearchService } from '../../services/search.service';
 import { CartService } from '@features/cart/services/cart.service';
 import { IconComponent } from '../../../../shared/components/icons/icons.component';
-import { getAssetUrl } from '../../../../core/utils';
+
 
 @Component({
   selector: 'app-mobile-search',
@@ -42,7 +42,7 @@ import { getAssetUrl } from '../../../../core/utils';
 export class MobileSearchComponent {
   protected searchService = inject(SearchService);
   protected cartService = inject(CartService);
-  protected getAssetUrl = getAssetUrl;
+  
 
   @ViewChild('searchInput', { read: ElementRef })
   searchInput!: ElementRef<HTMLInputElement>;

@@ -5,7 +5,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { SearchService } from '../../services/search.service';
 import { CartService } from '@features/cart/services/cart.service';
 import { IconComponent } from '../../../../shared/components/icons/icons.component';
-import { getAssetUrl } from '../../../../core/utils';
+
 
 @Component({
   selector: 'app-desktop-search',
@@ -39,7 +39,6 @@ export class DesktopSearchComponent {
   protected searchService = inject(SearchService);
   /** Servicio del carrito (totalItems para badge) */
   protected cartService = inject(CartService);
-  protected getAssetUrl = getAssetUrl;
 
   @ViewChild('searchInput', { read: ElementRef })
   searchInput!: ElementRef<HTMLInputElement>;

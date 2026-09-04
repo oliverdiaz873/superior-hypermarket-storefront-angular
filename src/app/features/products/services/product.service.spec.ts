@@ -42,6 +42,7 @@ describe('ProductService (categories F5.3.1)', () => {
   let httpMock: HttpTestingController;
 
   beforeEach(() => {
+    TestBed.resetTestingModule();
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       providers: [
@@ -118,7 +119,12 @@ describe('ProductService (categories F5.3.1)', () => {
 
       service.loadCategorySections(category);
 
-      const req = httpMock.expectOne((r: HttpRequest<unknown>) => r.url === `${getApiBaseUrl()}/products` && r.params.get('page') === '1');
+      const req = httpMock.expectOne(
+        (r: HttpRequest<unknown>) =>
+          r.url === `${getApiBaseUrl()}/products` &&
+          r.params.get('category') === 'bebidas' &&
+          r.params.get('page') === '1'
+      );
       req.flush({ success: true, data: page1, pagination: { page: 1, limit: 100, total: 3, pages: 1 } });
 
       expect(service.categorySections()['alimentos'][0].products).toHaveLength(3);
