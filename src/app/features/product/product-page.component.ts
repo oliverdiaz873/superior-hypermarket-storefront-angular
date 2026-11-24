@@ -1,7 +1,7 @@
 ﻿import { ChangeDetectionStrategy, Component, computed, DestroyRef, inject, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { getCategoryName, getSubcategoryName } from '@core/utils';
 import { subcategorySlugFromHref } from '@data/category-section-map.data';
 import { SeoService } from '@core/services/seo.service';
@@ -18,7 +18,7 @@ import { ProductTranslationService } from '@features/products/services/product-t
 @Component({
   selector: 'app-product-page',
   standalone: true,
-  imports: [BreadcrumbComponent, EmptyStateComponent, ProductDetailSectionComponent, ProductCarouselSectionComponent, ProductDetailSkeletonComponent],
+  imports: [BreadcrumbComponent, EmptyStateComponent, ProductDetailSectionComponent, ProductCarouselSectionComponent, ProductDetailSkeletonComponent, TranslatePipe],
   template: `
     @if (productService.productDetailLoading()) {
       <app-product-detail-skeleton></app-product-detail-skeleton>
@@ -27,7 +27,7 @@ import { ProductTranslationService } from '@features/products/services/product-t
       <div class="mx-auto max-w-[1280px] px-5">
         <app-product-detail-section [product]="product()!" [pageData]="pageData()"></app-product-detail-section>
       </div>
-      <app-product-carousel-section title="Productos relacionados" [products]="related()" [sectionClass]="'mt-6 md:mt-8'" [id]="'productos-similares'" [idPrefix]="'similares'"></app-product-carousel-section>
+      <app-product-carousel-section [title]="'productDetail.relatedProducts' | translate" [products]="related()" [sectionClass]="'mt-6 md:mt-8'" [id]="'productos-similares'" [idPrefix]="'similares'"></app-product-carousel-section>
     } @else {
       <app-empty-state title="Producto no encontrado" description="No encontramos el producto solicitado." actionLabel="Volver al inicio" actionHref="/"></app-empty-state>
     }
