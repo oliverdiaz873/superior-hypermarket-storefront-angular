@@ -73,16 +73,16 @@ describe('OfferFiltersService', () => {
     service.selectCategory('alimentos');
 
     const result = service.filteredProducts();
-    expect(result.map(p => p.id)).toEqual(['offer_alimentos_1', 'offer_alimentos_2']);
-    expect(result.every(p => p.categoria === 'alimentos')).toBe(true);
+    expect(result.map((p) => p.id)).toEqual(['offer_alimentos_1', 'offer_alimentos_2']);
+    expect(result.every((p) => p.categoria === 'alimentos')).toBe(true);
   });
 
   it('no incluye ofertas de otras categorías', () => {
     service.selectCategory('tecnologia');
 
     const result = service.filteredProducts();
-    expect(result.map(p => p.id)).toEqual(['offer_tecnologia_1']);
-    expect(result.some(p => p.categoria === 'alimentos')).toBe(false);
+    expect(result.map((p) => p.id)).toEqual(['offer_tecnologia_1']);
+    expect(result.some((p) => p.categoria === 'alimentos')).toBe(false);
   });
 
   it('devuelve lista vacía para una categoría sin ofertas', () => {
@@ -94,7 +94,7 @@ describe('OfferFiltersService', () => {
   it('ordena por discountPercentage de mayor a menor', () => {
     service.selectCategory('all');
 
-    expect(service.sortedProducts().map(p => p.discountPercentage)).toEqual([50, 30, 20]);
+    expect(service.sortedProducts().map((p) => p.discountPercentage)).toEqual([50, 30, 20]);
   });
 
   describe('totalProducts', () => {
