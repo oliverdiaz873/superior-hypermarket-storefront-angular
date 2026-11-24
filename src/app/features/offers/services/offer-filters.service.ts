@@ -28,6 +28,8 @@ export class OfferFiltersService {
     }));
   });
 
+  readonly totalProducts = computed(() => this.offerService.offers().length);
+
   readonly filteredProducts = computed<ProductUI[]>(() => {
     const offers = this.offerService.offers();
     const cat = this.selectedCategory();

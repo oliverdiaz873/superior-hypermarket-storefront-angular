@@ -1,4 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
+import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { OfferFiltersService } from './offer-filters.service';
 import { OfferService } from './offer.service';
@@ -48,13 +49,15 @@ const offers: ProductUI[] = [
 
 describe('OfferFiltersService', () => {
   let service: OfferFiltersService;
+  const offersSignal = signal<ProductUI[]>(offers);
 
   beforeEach(() => {
+    offersSignal.set(offers);
     TestBed.resetTestingModule();
     TestBed.configureTestingModule({
       providers: [
         OfferFiltersService,
-        { provide: OfferService, useValue: { offers: () => offers } },
+        { provide: OfferService, useValue: { offers: offersSignal.asReadonly() } },
         { provide: ProductService, useValue: { categories: () => categories } },
       ],
     });
@@ -92,5 +95,31 @@ describe('OfferFiltersService', () => {
     service.selectCategory('all');
 
     expect(service.sortedProducts().map(p => p.discountPercentage)).toEqual([50, 30, 20]);
+  });
+
+  describe('totalProducts', () => {
+    it('refleja el total de ofertas cargadas sin filtrar', () => {
+      expect(service.totalProducts()).toBe(offers.length);
+    });
+
+    it('permanece constante al filtrar por categoría', () => {
+      service.selectCategory('alimentos');
+
+      expect(service.filteredProducts()).toHaveLength(2);
+      expect(service.totalProducts()).toBe(offers.length);
+    });
+
+    it('vuelve a coincidir con filteredProducts al seleccionar "all"', () => {
+      service.selectCategory('alimentos');
+      service.selectCategory('all');
+
+      expect(service.filteredProducts()).toHaveLength(service.totalProducts());
+    });
+
+    it('se actualiza cuando cambia la colección original de ofertas', () => {
+      offersSignal.set([...offers, buildOffer('offer_nueva', 'alimentos', 10)]);
+
+      expect(service.totalProducts()).toBe(offers.length + 1);
+    });
   });
 });
