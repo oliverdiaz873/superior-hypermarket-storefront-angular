@@ -2,7 +2,7 @@
   @if (!isDrawer) {
     <div class="offer-filters__header">
       <h2 class="offer-filters__title">{{ 'offers.filters.title' | translate }}</h2>
-      <div class="offer-filters__badge">{{ service.filteredProducts().length }} / {{ service.sortedProducts().length }}</div>
+      <div class="offer-filters__badge">{{ service.filteredProducts().length }} / {{ service.totalProducts() }}</div>
     </div>
   }
 
@@ -22,5 +22,5 @@
     }
   </div>
 
-  <div class="offer-filters__info" [innerHTML]="'offers.filters.info' | translate:{ filtered: service.filteredProducts().length, total: service.sortedProducts().length }"></div>
+  <div class="offer-filters__info" [innerHTML]="'offers.filters.info' | translate:{ filtered: service.filteredProducts().length, total: service.totalProducts() }"></div>
 </div>

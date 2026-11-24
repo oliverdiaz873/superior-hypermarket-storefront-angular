@@ -3121,7 +3121,8 @@
   "productDetail": {
     "clickToEnlarge": "Click to enlarge",
     "expandedImage": "Expanded image of {{name}}",
-    "closeModal": "Close modal (ESC)"
+    "closeModal": "Close modal (ESC)",
+    "relatedProducts": "Similar Products"
   },
   "addresses": {
     "seo": {
