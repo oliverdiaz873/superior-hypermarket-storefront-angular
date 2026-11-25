@@ -4,14 +4,14 @@ import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { IconComponent } from '../../../../shared/components/icons/icons.component';
 import { LanguageSelectorComponent } from '../../../../shared/components/language-selector/language-selector.component';
+import { AccountMenuComponent } from '../../../../shared/components/account-menu/account-menu.component';
 import { ProductService } from '@features/products/services/product.service';
-import { AuthService } from '@features/auth/services/auth.service';
 import { getUrlFragment } from '../../../../core/utils/url.utils';
 
 @Component({
   selector: 'app-mobile-nav',
   standalone: true,
-  imports: [CommonModule, RouterLink, TranslatePipe, IconComponent, LanguageSelectorComponent],
+  imports: [CommonModule, RouterLink, TranslatePipe, IconComponent, LanguageSelectorComponent, AccountMenuComponent],
   templateUrl: './mobile-nav.component.html',
   styleUrls: ['./mobile-nav.component.scss']
 })
@@ -22,17 +22,10 @@ export class MobileNavComponent implements OnChanges, OnDestroy {
 
   private platformId = inject(PLATFORM_ID);
   private readonly productService = inject(ProductService);
-  private readonly auth = inject(AuthService);
 
   protected readonly categories = this.productService.categories;
-  protected readonly authStatus = this.auth.status;
-  protected readonly user = this.auth.user;
   protected openCategory = signal<string | null>(null);
   protected openSubcategories = signal<string[]>([]);
-
-  logout(): void {
-    this.auth.logout().subscribe(() => this.menuClosed.emit());
-  }
 
   getFragment(href: string): string {
     return getUrlFragment(href) || href.split('/').filter(Boolean).pop() || '';

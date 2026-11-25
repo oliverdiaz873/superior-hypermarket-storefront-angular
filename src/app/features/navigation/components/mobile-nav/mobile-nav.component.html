@@ -85,40 +85,11 @@
       </a>
     </li>
 
-    @switch (authStatus()) {
-      @case ('loading') {
-        <!-- Sesion en restauracion: sin enlaces de cuenta -->
-      }
-      @case ('authenticated') {
-        @if (user(); as user) {
-          <li class="mobile-nav-item">
-            <a routerLink="/account" class="mobile-nav-link" (click)="menuClosed.emit()">
-              <span class="mobile-user-avatar" aria-hidden="true">{{ user.name.charAt(0).toUpperCase() }}</span>
-              {{ 'header.account.account' | translate }}
-            </a>
-          </li>
-          <li class="mobile-nav-item">
-            <button type="button" class="mobile-nav-link mobile-nav-action" (click)="logout()">
-              {{ 'header.account.logout' | translate }}
-            </button>
-          </li>
-        }
-      }
-      @case ('anonymous') {
-        <li class="mobile-nav-item">
-          <a routerLink="/login" class="mobile-nav-link" (click)="menuClosed.emit()">
-            {{ 'header.account.login' | translate }}
-          </a>
-        </li>
-        <li class="mobile-nav-item">
-          <a routerLink="/register" class="mobile-nav-link" (click)="menuClosed.emit()">
-            {{ 'header.account.register' | translate }}
-          </a>
-        </li>
-      }
-    }
-
     @if (showLanguage) {
+      <li class="mobile-nav-item">
+        <app-account-menu variant="mobile" (navigated)="menuClosed.emit()"></app-account-menu>
+      </li>
+
       <li class="mobile-nav-item mobile-nav-lang">
         <div class="mobile-lang-wrapper">
           <app-icon name="world" className="w-5 h-5 shrink-0 opacity-70"></app-icon>
