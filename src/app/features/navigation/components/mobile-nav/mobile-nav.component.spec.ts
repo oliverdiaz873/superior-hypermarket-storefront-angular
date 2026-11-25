@@ -24,26 +24,32 @@ const translateServiceStub = {
   onLangChange: of({ lang: 'es' }),
 };
 
-describe('MobileNavComponent (account links)', () => {
+describe('MobileNavComponent (account card)', () => {
   let status: WritableSignal<AuthStatus>;
   let currentUser: WritableSignal<AuthUser | null>;
   let authMock: {
     status: () => AuthStatus;
     user: () => AuthUser | null;
+    initials: () => string;
     logout: ReturnType<typeof vi.fn>;
   };
 
   beforeEach(() => {
     status = signal<AuthStatus>('anonymous');
     currentUser = signal<AuthUser | null>(null);
-    authMock = { status: () => status(), user: () => currentUser(), logout: vi.fn(() => of(undefined)) };
+    authMock = {
+      status: () => status(),
+      user: () => currentUser(),
+      initials: () => 'AL',
+      logout: vi.fn(() => of(undefined)),
+    };
 
     TestBed.configureTestingModule({
       imports: [MobileNavComponent],
       providers: [
         { provide: ProductService, useValue: { categories: signal([]) } },
         { provide: AuthService, useValue: authMock },
-        { provide: Router, useValue: { navigateByUrl: vi.fn(), createUrlTree: vi.fn(() => ({})), serializeUrl: vi.fn(() => '') } },
+        { provide: Router, useValue: { navigateByUrl: vi.fn(), createUrlTree: vi.fn(() => ({})), serializeUrl: vi.fn(() => ''), events: of() } },
         { provide: ActivatedRoute, useValue: { snapshot: { queryParamMap: { get: () => null } }, url: of(null) } },
         { provide: TranslateService, useValue: translateServiceStub },
       ],
@@ -56,36 +62,35 @@ describe('MobileNavComponent (account links)', () => {
     return { fixture, text: fixture.nativeElement.textContent as string };
   };
 
-  it('shows login and register links when anonymous', () => {
-    vi.useFakeTimers();
-    try {
-      const { text } = render();
-      expect(text).toContain('header.account.login');
-      expect(text).toContain('header.account.register');
-    } finally {
-      vi.useRealTimers();
-    }
+  it('renders the account card with welcome and auth actions when anonymous', () => {
+    const { text } = render();
+    expect(text).toContain('header.account.welcome_title');
+    expect(text).toContain('header.account.login');
+    expect(text).toContain('header.account.create_account');
   });
 
-  it('shows account and logout when authenticated', () => {
+  it('renders the authenticated card with account links and logout', () => {
     status.set('authenticated');
     currentUser.set(user);
 
     const { text } = render();
+    expect(text).toContain('header.account.greeting_named');
     expect(text).toContain('header.account.account');
+    expect(text).toContain('footer.links.orders');
+    expect(text).toContain('footer.links.addresses');
     expect(text).toContain('header.account.logout');
-    expect(text).toContain('A');
   });
 
-  it('hides account links while the session is loading', () => {
+  it('shows only the skeleton while the session is loading', () => {
     status.set('loading');
 
-    const { text } = render();
-    expect(text).not.toContain('header.account.login');
+    const { fixture, text } = render();
+    expect(fixture.nativeElement.querySelector('.account-menu__skeleton--mobile')).toBeTruthy();
+    expect(text).not.toContain('header.account.welcome_title');
     expect(text).not.toContain('header.account.logout');
   });
 
-  it('calls logout and closes the drawer', () => {
+  it('logs out from the card and closes the drawer', () => {
     status.set('authenticated');
     currentUser.set(user);
 
@@ -94,9 +99,28 @@ describe('MobileNavComponent (account links)', () => {
     const close = vi.fn();
     fixture.componentInstance.menuClosed.subscribe(close);
 
-    fixture.componentInstance.logout();
+    const logoutButton = fixture.nativeElement.querySelector(
+      'app-account-menu .account-menu__link--logout',
+    ) as HTMLButtonElement;
+    expect(logoutButton).toBeTruthy();
+    logoutButton.click();
+    fixture.detectChanges();
 
     expect(authMock.logout).toHaveBeenCalledTimes(1);
+    expect(close).toHaveBeenCalledTimes(1);
+  });
+
+  it('emits menuClosed when navigating from the card', () => {
+    const fixture = TestBed.createComponent(MobileNavComponent);
+    fixture.detectChanges();
+    const close = vi.fn();
+    fixture.componentInstance.menuClosed.subscribe(close);
+
+    const link = fixture.nativeElement.querySelector(
+      'app-account-menu .account-menu__btn--primary',
+    ) as HTMLAnchorElement;
+    link.click();
+
     expect(close).toHaveBeenCalledTimes(1);
   });
 });

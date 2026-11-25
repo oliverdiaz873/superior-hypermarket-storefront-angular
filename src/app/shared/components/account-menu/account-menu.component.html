@@ -1,52 +1,108 @@
-<div class="account-menu">
+<div class="account-menu" [class.account-menu--mobile]="isMobile()">
   @if (status() === 'loading') {
-    <span class="account-menu__skeleton" aria-hidden="true"></span>
-  } @else if (user(); as user) {
-    <div class="account-menu__wrap">
-      <button
-        type="button"
-        class="account-menu__trigger"
-        (click)="toggle()"
-        [attr.aria-expanded]="isOpen()"
-        [attr.aria-haspopup]="'true'"
-        [attr.aria-label]="'header.account.open_account' | translate"
-      >
-        <app-icon name="user" className="account-menu__icon"></app-icon>
-        <span class="account-menu__name">{{ user.name.split(' ')[0] }}</span>
-        <app-icon name="chevron-down" className="account-menu__chevron"></app-icon>
-      </button>
-
-      @if (isOpen()) {
-        <ul class="account-menu__dropdown" role="menu">
-          <li role="none">
-            <a routerLink="/account" role="menuitem" (click)="isOpen.set(false)">
-              {{ 'header.account.account' | translate }}
-            </a>
-          </li>
-          <li role="none">
-            <a routerLink="/orders" role="menuitem" (click)="isOpen.set(false)">
-              {{ 'header.account.orders' | translate }}
-            </a>
-          </li>
-          <li role="none">
-            <a routerLink="/addresses" role="menuitem" (click)="isOpen.set(false)">
-              {{ 'header.account.addresses' | translate }}
-            </a>
-          </li>
-          <li role="none">
-            <button type="button" role="menuitem" (click)="logout()">
-              {{ 'header.account.logout' | translate }}
-            </button>
-          </li>
-        </ul>
-      }
-    </div>
+    <span class="account-menu__skeleton" [class.account-menu__skeleton--mobile]="isMobile()" aria-hidden="true"></span>
+  } @else if (isMobile()) {
+    <!-- Variante mobile: tarjeta inline dentro del drawer -->
+    @if (status() === 'anonymous') {
+      <div class="account-menu__card">
+        <div class="account-menu__card-head">
+          <span class="account-menu__badge" aria-hidden="true">
+            <app-icon name="user-round" className="account-menu__badge-icon w-5 h-5"></app-icon>
+          </span>
+          <div class="account-menu__card-text">
+            <p class="account-menu__card-title">{{ 'header.account.welcome_title' | translate }}</p>
+            <p class="account-menu__card-desc">{{ 'header.account.welcome_description' | translate }}</p>
+          </div>
+        </div>
+        <a [routerLink]="['/login']" [queryParams]="{ returnUrl: '/account' }" (click)="onNavigate()" class="account-menu__btn account-menu__btn--primary">
+          <app-icon name="log-in" className="account-menu__btn-icon w-4 h-4 shrink-0"></app-icon>
+          {{ 'header.account.login' | translate }}
+        </a>
+        <a [routerLink]="['/register']" (click)="onNavigate()" class="account-menu__btn account-menu__btn--secondary">
+          <app-icon name="user-plus" className="account-menu__btn-icon w-4 h-4 shrink-0"></app-icon>
+          {{ 'header.account.create_account' | translate }}
+        </a>
+      </div>
+    } @else {
+      <div class="account-menu__card">
+        <div class="account-menu__card-user">
+          <span class="account-menu__avatar" aria-hidden="true">{{ initials() }}</span>
+          <div class="account-menu__card-text">
+            <p class="account-menu__card-name">{{ 'header.account.greeting_named' | translate:{ name: firstName() } }}</p>
+            <p class="account-menu__card-email">{{ user()?.email }}</p>
+          </div>
+        </div>
+        <a [routerLink]="['/account']" (click)="onNavigate()" class="account-menu__link">{{ 'header.account.account' | translate }}</a>
+        <a [routerLink]="['/orders']" (click)="onNavigate()" class="account-menu__link">{{ 'footer.links.orders' | translate }}</a>
+        <a [routerLink]="['/addresses']" (click)="onNavigate()" class="account-menu__link">{{ 'footer.links.addresses' | translate }}</a>
+        <button type="button" class="account-menu__link account-menu__link--logout" [disabled]="pending()" (click)="logout()">
+          <app-icon name="log-out" className="account-menu__link-icon w-4 h-4 shrink-0"></app-icon>
+          {{ pending() ? ('auth.account.logging_out' | translate) : ('header.account.logout' | translate) }}
+        </button>
+      </div>
+    }
   } @else {
-    <div class="account-menu__anon">
-      <a routerLink="/login" class="account-menu__link">{{ 'header.account.login' | translate }}</a>
-      <a routerLink="/register" class="account-menu__link account-menu__link--cta">
-        {{ 'header.account.register' | translate }}
-      </a>
+    <!-- Variante desktop: trigger disclosure + dropdown -->
+    <button
+      type="button"
+      class="account-menu__trigger"
+      (click)="toggle()"
+      [attr.aria-expanded]="isOpen()"
+      [attr.aria-controls]="panelId"
+      [attr.aria-label]="'header.account.open_account' | translate"
+    >
+      @if (user()) {
+        <span class="account-menu__avatar" aria-hidden="true">{{ initials() }}</span>
+      } @else {
+        <app-icon name="user-round" className="account-menu__icon w-[26px] h-[26px] shrink-0"></app-icon>
+      }
+      <span class="account-menu__lines">
+        <span class="account-menu__line1">{{ greeting().key | translate:greeting().params }}</span>
+        <span class="account-menu__line2">{{ 'header.account.account' | translate }}</span>
+      </span>
+      <app-icon name="chevron-down" [className]="'account-menu__chevron w-3 h-3 shrink-0 transition-transform duration-300 ease-in-out motion-reduce:transition-none' + (isOpen() ? ' rotate-180' : '')"></app-icon>
+    </button>
+
+    <div [id]="panelId" class="account-menu__panel" [class.is-open]="isOpen()">
+      @if (status() === 'anonymous') {
+        <div class="account-menu__panel-head">
+          <span class="account-menu__badge" aria-hidden="true">
+            <app-icon name="user-round" className="account-menu__badge-icon w-5 h-5"></app-icon>
+          </span>
+          <div class="account-menu__card-text">
+            <p class="account-menu__panel-title">{{ 'header.account.welcome_title' | translate }}</p>
+            <p class="account-menu__panel-desc">{{ 'header.account.welcome_description' | translate }}</p>
+          </div>
+        </div>
+        <div class="account-menu__divider" aria-hidden="true"></div>
+        <div class="account-menu__actions">
+          <a [routerLink]="['/login']" [queryParams]="{ returnUrl: '/account' }" (click)="close()" class="account-menu__btn account-menu__btn--primary">
+            <app-icon name="log-in" className="account-menu__btn-icon w-4 h-4 shrink-0"></app-icon>
+            {{ 'header.account.login' | translate }}
+          </a>
+          <a [routerLink]="['/register']" (click)="close()" class="account-menu__btn account-menu__btn--secondary">
+            <app-icon name="user-plus" className="account-menu__btn-icon w-4 h-4 shrink-0"></app-icon>
+            {{ 'header.account.create_account' | translate }}
+          </a>
+        </div>
+      } @else {
+        <div class="account-menu__panel-user">
+          <span class="account-menu__avatar" aria-hidden="true">{{ initials() }}</span>
+          <div class="account-menu__card-text">
+            <p class="account-menu__panel-user-name">{{ 'header.account.greeting_named' | translate:{ name: firstName() } }}</p>
+            <p class="account-menu__panel-user-email">{{ user()?.email }}</p>
+          </div>
+        </div>
+        <div class="account-menu__menu">
+          <a [routerLink]="['/account']" (click)="close()" class="account-menu__item">{{ 'header.account.account' | translate }}</a>
+          <a [routerLink]="['/orders']" (click)="close()" class="account-menu__item">{{ 'footer.links.orders' | translate }}</a>
+          <a [routerLink]="['/addresses']" (click)="close()" class="account-menu__item">{{ 'footer.links.addresses' | translate }}</a>
+          <button type="button" class="account-menu__item account-menu__item--logout" [disabled]="pending()" (click)="logout()">
+            <app-icon name="log-out" className="account-menu__item-icon w-4 h-4 shrink-0"></app-icon>
+            {{ pending() ? ('auth.account.logging_out' | translate) : ('header.account.logout' | translate) }}
+          </button>
+        </div>
+      }
     </div>
   }
 </div>

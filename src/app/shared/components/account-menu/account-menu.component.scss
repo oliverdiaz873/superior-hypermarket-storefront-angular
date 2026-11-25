@@ -1,124 +1,309 @@
+/* AccountMenu — paridad visual con la versión Next.js auditada.
+   Tokens: header negro, acento naranja #f97316, panel oscuro, ~150-300ms. */
+
 .account-menu {
   position: relative;
   display: flex;
   align-items: center;
 }
 
+.account-menu--mobile {
+  display: block;
+}
+
+/* ── Skeleton (loading) ─────────────────────────────────────────────── */
 .account-menu__skeleton {
-  width: 4.5rem;
-  height: 2rem;
-  border-radius: 0.375rem;
-  background: rgba(255, 255, 255, 0.18);
+  display: block;
+  width: 176px; /* w-44 */
+  height: 44px; /* h-11 */
+  border-radius: 12px; /* rounded-xl */
+  background: rgba(255, 255, 255, 0.1);
   animation: account-pulse 1.2s ease-in-out infinite;
 }
 
+.account-menu__skeleton--mobile {
+  width: 100%;
+  height: 112px; /* h-28 */
+  border-radius: 16px; /* rounded-2xl */
+}
+
 @keyframes account-pulse {
-  0%, 100% { opacity: 0.55; }
-  50% { opacity: 1; }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
 }
 
-.account-menu__wrap {
-  position: relative;
-}
-
+/* ── Trigger desktop (dos líneas) ───────────────────────────────────── */
 .account-menu__trigger {
-  display: inline-flex;
+  display: flex;
+  height: 44px; /* h-11 */
   align-items: center;
-  gap: 0.375rem;
-  background: transparent;
+  gap: 8px; /* gap-2 */
   border: none;
-  color: inherit;
+  border-radius: 12px; /* rounded-xl */
+  background: transparent;
+  padding: 0 10px; /* px-2.5 */
+  color: #fff;
   font: inherit;
-  font-weight: 600;
   cursor: pointer;
-  padding: 0.375rem 0.5rem;
+  transition: background-color 200ms;
+}
+
+.account-menu__trigger:hover { background: rgba(255, 255, 255, 0.1); }
+.account-menu__trigger:active { background: rgba(255, 255, 255, 0.15); }
+.account-menu__trigger:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(249 115 22 / 0.6);
+}
+
+/* Los SVG de app-icon se dimensionan con utilidades Tailwind globales
+   (la encapsulación de Angular no alcanza el svg interno del icono);
+   el color se hereda vía currentColor desde el contenedor. */
+.account-menu__avatar {
+  display: flex;
+  width: 36px; /* h-9 w-9 */
+  height: 36px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
   border-radius: 9999px;
-  transition: background 150ms;
+  background: #f97316; /* orange-500 */
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-.account-menu__trigger:hover {
-  background: rgba(255, 255, 255, 0.15);
+.account-menu__lines {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.account-menu__icon {
-  width: 1.1rem;
-  height: 1.1rem;
+.account-menu__line1 {
+  font-size: 11px;
+  line-height: 1.25; /* leading-tight */
+  color: #fff;
 }
 
-.account-menu__name {
-  max-width: 7rem;
+.account-menu__line2 {
+  max-width: 140px;
   overflow: hidden;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #fff;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.account-menu__chevron {
-  width: 0.875rem;
-  height: 0.875rem;
-  opacity: 0.7;
+@media (prefers-reduced-motion: reduce) {
+  .account-menu__panel { transition: none; }
 }
 
-.account-menu__dropdown {
+/* ── Panel dropdown desktop ─────────────────────────────────────────── */
+.account-menu__panel {
   position: absolute;
-  top: calc(100% + 0.5rem);
+  top: calc(100% + 8px);
   right: 0;
-  min-width: 12rem;
-  margin: 0;
-  padding: 0.375rem;
-  list-style: none;
-  background: #fff;
-  color: #111827;
-  border: 1px solid var(--color-border, #e5e7eb);
-  border-radius: 0.625rem;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
-  z-index: var(--z-dropdown, 1200);
+  z-index: 50;
+  width: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px; /* rounded-2xl */
+  background: rgba(0, 0, 0, 0.9);
+  padding: 8px; /* p-2 */
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 150ms, transform 150ms, visibility 150ms;
 }
 
-.account-menu__dropdown a,
-.account-menu__dropdown button {
-  display: block;
-  width: 100%;
-  text-align: left;
-  padding: 0.5rem 0.75rem;
-  border: none;
-  background: transparent;
-  color: inherit;
-  border-radius: 0.375rem;
-  cursor: pointer;
-  font: inherit;
+.account-menu__panel.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
-.account-menu__dropdown a:hover,
-.account-menu__dropdown button:hover {
-  background: #f3f4f6;
-}
-
-.account-menu__anon {
+.account-menu__panel-head,
+.account-menu__card-head {
   display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.account-menu__panel-head { padding: 16px 16px 12px; }
+
+.account-menu__badge {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
   align-items: center;
-  gap: 0.375rem;
-}
-
-.account-menu__link {
-  color: inherit;
-  text-decoration: none;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  padding: 0.375rem 0.625rem;
+  justify-content: center;
+  margin-top: 2px;
   border-radius: 9999px;
-  transition: background 150ms;
-  white-space: nowrap;
+  background: rgb(249 115 22 / 0.15); /* orange-500/15 */
+  color: #fb923c; /* orange-400 */
 }
 
-.account-menu__link:hover {
-  background: rgba(255, 255, 255, 0.15);
-}
+.account-menu__card-text { min-width: 0; }
 
-.account-menu__link--cta {
-  background: var(--color-primary, #2563eb);
+.account-menu__panel-title,
+.account-menu__card-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
   color: #fff;
 }
 
-.account-menu__link--cta:hover {
-  background: var(--color-primary, #1d4ed8);
+.account-menu__card-title { font-size: 14px; }
+
+.account-menu__panel-desc,
+.account-menu__card-desc {
+  margin: 4px 0 0;
+  font-size: 12px;
+  line-height: 1.625; /* leading-relaxed */
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.account-menu__divider {
+  height: 1px;
+  margin: 0 12px 12px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.account-menu__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+}
+
+.account-menu__btn {
+  display: flex;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 12px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 200ms, color 200ms, border-color 200ms;
+}
+
+.account-menu__btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(249 115 22 / 0.6);
+}
+
+.account-menu__btn--primary {
+  background: #f97316;
+  color: #fff;
+}
+
+.account-menu__btn--primary:hover { background: #ea580c; /* orange-600 */ }
+
+.account-menu__btn--secondary {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.account-menu__btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.account-menu__panel-user,
+.account-menu__card-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.account-menu__panel-user { padding: 12px 16px; }
+.account-menu__card-user { padding-bottom: 12px; }
+
+.account-menu__panel-user-name,
+.account-menu__card-name {
+  margin: 0;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.account-menu__panel-user-email,
+.account-menu__card-email {
+  margin: 0;
+  overflow: hidden;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.account-menu__menu {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+/* Items del panel y enlaces de la tarjeta comparten estilo base. */
+.account-menu__item,
+.account-menu__link {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  border-radius: 8px; /* rounded-lg */
+  background: transparent;
+  padding: 10px 12px; /* py-2.5 px-3 */
+  font: inherit;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 200ms, color 200ms;
+}
+
+.account-menu__link:not(.account-menu__link--logout) { display: block; }
+
+.account-menu__item:hover,
+.account-menu__link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.account-menu__item:focus-visible,
+.account-menu__link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(249 115 22 / 0.6);
+}
+
+.account-menu__item--logout,
+.account-menu__link--logout { color: #f87171; /* red-400 */ }
+
+.account-menu__item--logout:hover,
+.account-menu__link--logout:hover { color: #fca5a3; /* red-300 */ }
+
+.account-menu__item--logout:disabled,
+.account-menu__link--logout:disabled { opacity: 0.5; }
+
+/* ── Tarjeta inline (variante mobile / drawer) ──────────────────────── */
+.account-menu__card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px; /* rounded-2xl */
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px;
 }

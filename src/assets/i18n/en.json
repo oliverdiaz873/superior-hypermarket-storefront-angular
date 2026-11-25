@@ -768,6 +768,7 @@
       },
       "loading": "Loading your account...",
       "logout": "Log out",
+      "logging_out": "Signing out...",
       "back_home": "Back to home",
       "orders": "My orders",
       "addresses": "My addresses",
@@ -817,7 +818,12 @@
       "logout": "Log out",
       "open_account": "Open account menu",
       "orders": "My orders",
-      "addresses": "My addresses"
+      "addresses": "My addresses",
+      "greeting": "Welcome",
+      "greeting_named": "Hello, {{name}}",
+      "welcome_title": "Welcome to Superior Hypermarket!",
+      "welcome_description": "Sign in to enjoy a personalized shopping experience.",
+      "create_account": "Create an account"
     }
   },
   "home": {

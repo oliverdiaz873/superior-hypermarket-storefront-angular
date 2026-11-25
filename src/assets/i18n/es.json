@@ -768,6 +768,7 @@
       },
       "loading": "Cargando tu cuenta...",
       "logout": "Cerrar sesión",
+      "logging_out": "Cerrando sesión...",
       "back_home": "Volver al inicio",
       "orders": "Mis pedidos",
       "addresses": "Mis direcciones",
@@ -817,7 +818,12 @@
       "logout": "Cerrar sesión",
       "open_account": "Abrir menú de cuenta",
       "orders": "Mis pedidos",
-      "addresses": "Mis direcciones"
+      "addresses": "Mis direcciones",
+      "greeting": "Hola, bienvenido",
+      "greeting_named": "Hola, {{name}}",
+      "welcome_title": "¡Bienvenido a Hipermercado Superior!",
+      "welcome_description": "Inicia sesión para disfrutar de una experiencia de compra personalizada.",
+      "create_account": "Crear una cuenta"
     }
   },
   "home": {

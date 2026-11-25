@@ -35,10 +35,14 @@
       (searchToggle)="onSearchToggle($event)"
     ></app-header-search>
 
+    <!-- Account menu (desktop only) -->
+    @if (viewportMode() === 'desktop') {
+      <app-account-menu></app-account-menu>
+    }
+
     <!-- Language selector (only on desktop) -->
     @if (viewportMode() === 'desktop') {
       <app-language-selector></app-language-selector>
-      <app-account-menu></app-account-menu>
     }
   </div>
 </header>
